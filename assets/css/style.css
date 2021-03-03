@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "PT Sans";
   background-color: #040404;
   color: #040404;
   position: relative;
@@ -44,7 +44,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "PT Sans";
 }
 
 /*--------------------------------------------------------------
@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  font-family: "Poppins", sans-serif;
+  font-family: "PT Sans";
 }
 
 #header h1 a, #header h1 a:hover {
@@ -352,7 +352,7 @@ section .container {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #040404;
-  font-family: "Poppins", sans-serif;
+  font-family: "PT Sans";
 }
 
 .section-title h2::after {
@@ -370,7 +370,7 @@ section .container {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: "PT Sans";
   color: #040404;
 }
 
@@ -439,7 +439,7 @@ section .container {
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "PT Sans";
   font-size: 14px;
 }
 
@@ -458,7 +458,7 @@ section .container {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: "PT Sans";
   color: #040404;
 }
 

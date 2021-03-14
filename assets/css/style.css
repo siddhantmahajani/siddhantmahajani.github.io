@@ -1,15 +1,8 @@
-/**
-* Template Name: Personal - v2.4.0
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Helvetica Neue";
+  font-family: "Tahoma";
   font-size: 16px;
   background-color: #f5f8fA;
   color: #f5f8fA;
@@ -45,7 +38,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue";
+  font-family: "Tahoma";
 }
 
 /*--------------------------------------------------------------
@@ -71,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  font-family: "Helvetica Neue";
+  font-family: "Tahoma";
 }
 
 #header h1 a, #header h1 a:hover {
@@ -162,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   color: #f5f8fA;
   font-size: 16px;
-  font-family: "Helvetica Neue";
+  font-family: "Tahoma";
   font-weight: 400;
 }
 
@@ -353,7 +346,7 @@ section .container {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #f5f8fA;
-  font-family: "Helvetica Neue";
+  font-family: "Tahoma";
 }
 
 .section-title h2::after {
@@ -371,7 +364,7 @@ section .container {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: "Helvetica Neue";
+  font-family: "Tahoma";
   color: #f5f8fA;
 }
 
@@ -440,7 +433,7 @@ section .container {
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue";
+  font-family: "Tahoma";
   font-size: 14px;
 }
 
@@ -459,7 +452,7 @@ section .container {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: "Helvetica Neue";
+  font-family: "Tahoma";
   color: #f5f8fA;
 }
 
@@ -615,7 +608,7 @@ section .container {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Helvetica Neue";
+  font-family: "Tahoma";
   color: #1da1f2;
   margin-bottom: 10px;
 }

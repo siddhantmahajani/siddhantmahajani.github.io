@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "PT Sans";
+  font-family: "Helvetica Neue";
   font-size: 16px;
   background-color: #f5f8fA;
   color: #f5f8fA;
@@ -20,7 +20,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 top right no-repeat;
+  background: #1e2020 top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -45,7 +45,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "PT Sans";
+  font-family: "Helvetica Neue";
 }
 
 /*--------------------------------------------------------------
@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  font-family: "PT Sans";
+  font-family: "Helvetica Neue";
 }
 
 #header h1 a, #header h1 a:hover {
@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #040404;
+  background: #1e2020;
   color: #f5f8fA;
   line-height: 1;
   margin-right: 8px;
@@ -162,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   color: #f5f8fA;
   font-size: 16px;
-  font-family: "PT Sans";
+  font-family: "Helvetica Neue";
   font-weight: 400;
 }
 
@@ -217,13 +217,13 @@ h1, h2, h3, h4, h5, h6 {
   left: 15px;
   z-index: 9999;
   overflow-y: auto;
-  background: #040404;
+  background: #1e2020;
   transition: ease-in-out 0.2s;
   opacity: 0;
   visibility: hidden;
   border-radius: 10px;
   padding: 10px 0;
-  border: 2px solid #040404;
+  border: 2px solid #1e2020;
 }
 
 .mobile-nav * {
@@ -253,7 +253,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   position: fixed;
-  background: #040404;
+  background: #1e2020;
   overflow: hidden;
   display: none;
   transition: ease-in-out 0.2s;
@@ -279,7 +279,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   top: 0;
   right: 0;
-  background: #040404;
+  background: #1e2020;
 }
 
 #header.header-top .social-links, #header.header-top h2 {
@@ -331,7 +331,7 @@ section.section-show {
 }
 
 section .container {
-  background: #040404;
+  background: #1e2020;
   padding: 30px;
 }
 
@@ -353,7 +353,7 @@ section .container {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #f5f8fA;
-  font-family: "PT Sans";
+  font-family: "Helvetica Neue";
 }
 
 .section-title h2::after {
@@ -371,7 +371,7 @@ section .container {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: "PT Sans";
+  font-family: "Helvetica Neue";
   color: #f5f8fA;
 }
 
@@ -415,7 +415,7 @@ section .container {
   width: 100%;
   position: relative;
   text-align: center;
-  background: #040404;
+  background: #1e2020;
 }
 
 .counts .count-box i {
@@ -440,7 +440,7 @@ section .container {
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "PT Sans";
+  font-family: "Helvetica Neue";
   font-size: 14px;
 }
 
@@ -459,7 +459,7 @@ section .container {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: "PT Sans";
+  font-family: "Helvetica Neue";
   color: #f5f8fA;
 }
 
@@ -469,7 +469,7 @@ section .container {
 }
 
 .skills .progress-bar-wrap {
-  background: #040404;
+  background: #1e2020;
 }
 
 .skills .progress-bar {
@@ -561,7 +561,7 @@ section .container {
   font-style: italic;
   margin: 0 15px 0 15px;
   padding: 20px 20px 60px 20px;
-  background: #040404;
+  background: #1e2020;
   position: relative;
   border-radius: 6px;
   position: relative;
@@ -579,7 +579,7 @@ section .container {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #040404 !important;
+  background-color: #1e2020 !important;
 }
 
 .testimonials .owl-dot.active {
@@ -615,14 +615,14 @@ section .container {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "PT Sans";
+  font-family: "Helvetica Neue";
   color: #1da1f2;
   margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
   font-size: 16px;
-  background: #040404;
+  background: #1e2020;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
@@ -689,7 +689,7 @@ section .container {
   top: -8px;
   height: 100%;
   width: 100%;
-  background: #040404;
+  background: #1e2020;
   border-radius: 5px;
   transition: all .3s ease-out 0s;
   transform: translateZ(-1px);
@@ -717,7 +717,7 @@ section .container {
 }
 
 .services .icon-box:hover .icon {
-  background: #040404;
+  background: #1e2020;
 }
 
 .services .icon-box:hover .icon i {
@@ -757,7 +757,7 @@ section .container {
   line-height: 1;
   text-transform: uppercase;
   color: #f5f8fA;
-  background: #040404;
+  background: #1e2020;
   margin: 0 3px 10px 3px;
   transition: all 0.3s ease-in-out;
   border-radius: 4px;
@@ -776,12 +776,12 @@ section .container {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: #040404;
+  background: #1e2020;
 }
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: #040404;
+  background: #1e2020;
   position: absolute;
   left: 30px;
   right: 30px;
@@ -816,8 +816,8 @@ section .container {
   position: absolute;
   top: 35px;
   left: 35px;
-  border-top: 3px solid #040404;
-  border-left: 3px solid #040404;
+  border-top: 3px solid #1e2020;
+  border-left: 3px solid #1e2020;
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
@@ -830,8 +830,8 @@ section .container {
   position: absolute;
   bottom: 35px;
   right: 35px;
-  border-bottom: 3px solid #040404;
-  border-right: 3px solid #040404;
+  border-bottom: 3px solid #1e2020;
+  border-right: 3px solid #1e2020;
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
@@ -896,7 +896,7 @@ section .container {
   color: #f5f8fA;
   padding: 20px;
   width: 100%;
-  background: #040404;
+  background: #1e2020;
 }
 
 .contact .info-box i.bx {
@@ -905,7 +905,7 @@ section .container {
   border-radius: 50%;
   padding: 14px;
   float: left;
-  background: #040404;
+  background: #1e2020;
 }
 
 .contact .info-box h3 {
@@ -943,7 +943,7 @@ section .container {
 
 .contact .php-email-form {
   padding: 30px;
-  background: #040404;
+  background: #1e2020;
 }
 
 .contact .php-email-form .validate {
@@ -956,7 +956,7 @@ section .container {
 
 .contact .php-email-form .error-message {
   display: none;
-  background: #040404;
+  background: #1e2020;
   background: #ed3c0d;
   text-align: left;
   padding: 15px;
@@ -969,7 +969,7 @@ section .container {
 
 .contact .php-email-form .sent-message {
   display: none;
-  background: #040404;
+  background: #1e2020;
   background: #1da1f2;
   text-align: center;
   padding: 15px;
@@ -978,7 +978,7 @@ section .container {
 
 .contact .php-email-form .loading {
   display: none;
-  background: #040404;
+  background: #1e2020;
   text-align: center;
   padding: 15px;
 }
@@ -991,7 +991,7 @@ section .container {
   height: 24px;
   margin: 0 10px -6px 0;
   border: 3px solid #1da1f2;
-  border-top-color: #040404;
+  border-top-color: #1e2020;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
 }
@@ -1000,38 +1000,38 @@ section .container {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
-  background: #040404;
+  background: #1e2020;
   border: 0;
   transition: 0.3s;
   color: #f5f8fA;
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  background-color: #040404;
+  background-color: #1e2020;
 }
 
 .contact .php-email-form input::-webkit-input-placeholder, .contact .php-email-form textarea::-webkit-input-placeholder {
-  color: #040404;
+  color: #1e2020;
   opacity: 1;
 }
 
 .contact .php-email-form input::-moz-placeholder, .contact .php-email-form textarea::-moz-placeholder {
-  color: #040404;
+  color: #1e2020;
   opacity: 1;
 }
 
 .contact .php-email-form input:-ms-input-placeholder, .contact .php-email-form textarea:-ms-input-placeholder {
-  color: #040404;
+  color: #1e2020;
   opacity: 1;
 }
 
 .contact .php-email-form input::-ms-input-placeholder, .contact .php-email-form textarea::-ms-input-placeholder {
-  color: #040404;
+  color: #1e2020;
   opacity: 1;
 }
 
 .contact .php-email-form input::placeholder, .contact .php-email-form textarea::placeholder {
-  color: #040404;
+  color: #1e2020;
   opacity: 1;
 }
 
@@ -1079,7 +1079,7 @@ section .container {
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
-  background: #040404;
+  background: #1e2020;
   position: fixed;
   left: 0;
   right: 0;
@@ -1110,7 +1110,7 @@ section .container {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #040404 !important;
+  background-color: #1e2020 !important;
 }
 
 .portfolio-details .portfolio-details-carousel .owl-dot.active {
@@ -1167,7 +1167,7 @@ section .container {
   .credits {
     text-align: center;
     padding: 10px;
-    background: #040404;
+    background: #1e2020;
   }
 }
 

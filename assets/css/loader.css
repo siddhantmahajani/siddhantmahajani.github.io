@@ -5,7 +5,7 @@
     left:0;
     bottom:0;
     right:0;
-    background: #040404;
+    background: #1e2020;
     transition: 1s 0.4s;
   }
   #progress{
@@ -17,7 +17,7 @@
   }
   #progstat{
     font-size:0.7em;
-    font-family: "PT Sans";
+    font-family: "Helvetica Neue";
     letter-spacing: 3px;
     position:absolute;
     top:50%;

@@ -17,7 +17,7 @@
   }
   #progstat{
     font-size:0.7em;
-    font-family: monospace;
+    font-family: "Source Code Pro", monospace;
     letter-spacing: 3px;
     position:absolute;
     top:50%;

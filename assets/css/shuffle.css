@@ -10,10 +10,10 @@
 .text {
   font-weight: 100;
   font-size: 34px;
-  color: #d7d7d7;
+  color: #000000;
   font-family: "Source Code Pro", monospace;
 }
 
 .dud {
-  color: #d7d7d7;
+  color: #000000;
 }

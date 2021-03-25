@@ -70,7 +70,7 @@ class TextScramble {
     'and walking the path'
   ]*/
   const phrases = [
-    "Hi,",
+    "Hi 👋🏻,",
     "I'm Siddhant Mahajani",
     "I'm a Software Engineer",
     "a Backend Developer",

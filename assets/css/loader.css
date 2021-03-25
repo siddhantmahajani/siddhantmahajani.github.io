@@ -10,7 +10,7 @@
   }
   #progress{
     height:1px;
-    background: #1da1f2;
+    background: #268bd2;
     position:absolute;
     width:0;
     top:50%;
@@ -24,5 +24,5 @@
     margin-top:-40px;
     width:100%;
     text-align:center;
-    color: #000000;
+    color: #073642;
   }

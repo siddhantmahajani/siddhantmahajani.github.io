@@ -29,11 +29,11 @@ body::before {
 }
 
 a {
-  color: #268bd2;
+  color: #0072b1;
 }
 
 a:hover {
-  color: #268bd2;
+  color: #0072b1;
   text-decoration: none;
 }
 
@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #header h2 span {
   color: #073642;
-  border-bottom: 2px solid #268bd2;
+  border-bottom: 2px solid #0072b1;
   padding-bottom: 6px;
 }
 
@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .social-links a:hover {
-  background: #268bd2;
+  background: #0072b1;
 }
 
 @media (max-width: 992px) {
@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #268bd2;
+  background-color: #0072b1;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -235,7 +235,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #268bd2;
+  color: #0072b1;
   text-decoration: none;
 }
 
@@ -354,7 +354,7 @@ section .container {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: #268bd2;
+  background: #0072b1;
   margin: 4px 10px;
 }
 
@@ -374,7 +374,7 @@ section .container {
 .about-me .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #268bd2;
+  color: #0072b1;
 }
 
 .about-me .content ul {
@@ -389,7 +389,7 @@ section .container {
 .about-me .content ul i {
   font-size: 20px;
   padding-right: 2px;
-  color: #268bd2;
+  color: #0072b1;
 }
 
 .about-me .content p:last-child {
@@ -419,7 +419,7 @@ section .container {
   font-size: 24px;
   background: #073642;
   padding: 12px;
-  color: #268bd2;
+  color: #0072b1;
   border-radius: 50px;
 }
 
@@ -469,7 +469,7 @@ section .container {
   width: 1px;
   height: 10px;
   transition: .9s;
-  background-color: #268bd2;
+  background-color: #0072b1;
 }
 
 /*--------------------------------------------------------------
@@ -576,7 +576,7 @@ section .container {
 }
 
 .testimonials .owl-dot.active {
-  background-color: #268bd2 !important;
+  background-color: #0072b1 !important;
 }
 
 @media (max-width: 767px) {
@@ -599,7 +599,7 @@ section .container {
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #268bd2;
+  border-left: 2px solid #0072b1;
   position: relative;
 }
 
@@ -609,7 +609,7 @@ section .container {
   font-weight: 600;
   text-transform: uppercase;
   font-family: 'PT Sans', monospace;
-  color: #268bd2;
+  color: #0072b1;
   margin-bottom: 10px;
 }
 
@@ -642,8 +642,8 @@ section .container {
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: #268bd2;
-  border: 2px solid #268bd2;
+  background: #0072b1;
+  border: 2px solid #0072b1;
 }
 
 /*--------------------------------------------------------------
@@ -660,7 +660,7 @@ section .container {
   margin: 0 auto;
   width: 64px;
   height: 64px;
-  background: #268bd2;
+  background: #0072b1;
   border-radius: 5px;
   transition: all .3s ease-out 0s;
   display: flex;
@@ -705,8 +705,8 @@ section .container {
 }
 
 .services .icon-box:hover {
-  background: #268bd2;
-  border-color: #268bd2;
+  background: #0072b1;
+  border-color: #0072b1;
 }
 
 .services .icon-box:hover .icon {
@@ -714,11 +714,11 @@ section .container {
 }
 
 .services .icon-box:hover .icon i {
-  color: #268bd2;
+  color: #0072b1;
 }
 
 .services .icon-box:hover .icon::before {
-  background: #268bd2;
+  background: #0072b1;
 }
 
 .services .icon-box:hover h4 a, .services .icon-box:hover p {
@@ -757,7 +757,7 @@ section .container {
 }
 
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
-  background: #268bd2;
+  background: #0072b1;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -857,7 +857,7 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #268bd2;
+  color: #0072b1;
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -894,7 +894,7 @@ section .container {
 
 .contact .info-box i.bx {
   font-size: 24px;
-  color: #268bd2;
+  color: #0072b1;
   border-radius: 50%;
   padding: 14px;
   float: left;
@@ -931,7 +931,7 @@ section .container {
 }
 
 .contact .info-box .social-links a:hover {
-  color: #268bd2;
+  color: #0072b1;
 }
 
 .contact .php-email-form {
@@ -963,7 +963,7 @@ section .container {
 .contact .php-email-form .sent-message {
   display: none;
   background: #fdf6e3;
-  background: #268bd2;
+  background: #0072b1;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -983,7 +983,7 @@ section .container {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #268bd2;
+  border: 3px solid #0072b1;
   border-top-color: #fdf6e3;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
@@ -1037,7 +1037,7 @@ section .container {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #268bd2;
+  background: #0072b1;
   border: 0;
   padding: 10px 30px;
   color: #073642;
@@ -1046,7 +1046,7 @@ section .container {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: #268bd2;
+  background: #0072b1;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1107,7 +1107,7 @@ section .container {
 }
 
 .portfolio-details .portfolio-details-carousel .owl-dot.active {
-  background-color: #268bd2 !important;
+  background-color: #0072b1 !important;
 }
 
 .portfolio-details .portfolio-info {
@@ -1165,7 +1165,7 @@ section .container {
 }
 
 .credits a {
-  color: #268bd2;
+  color: #0072b1;
   transition: 0.3s;
 }
 

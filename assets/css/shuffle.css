@@ -7,6 +7,27 @@
   align-items: center;
   display: flex;
 }*/
+
+/* For tablet screens */
+@media only screen and (min-width: 600px) {
+  .text {
+    font-weight: 100;
+    font-size: 30px;
+    color: #073642;
+    font-family: "Source Code Pro", monospace;
+  }
+}
+
+/* For mobile screens */
+@media only screen and (min-width: 768px) {
+  .text {
+    font-weight: 100;
+    font-size: 25px;
+    color: #073642;
+    font-family: "Source Code Pro", monospace;
+  }
+}
+
 .text {
   font-weight: 100;
   font-size: 34px;

@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+@import 'https://fonts.googleapis.com/css2?family=Sacramento&family=Shadows+Into+Light&display=swap';
 
 /*.container {
   height: 100%;
@@ -14,7 +14,7 @@
     font-weight: 100;
     font-size: 30px;
     color: #073642;
-    font-family: "Source Code Pro", monospace;
+    font-family: 'Shadows Into Light', cursive;
   }
 }
 
@@ -24,7 +24,7 @@
     font-weight: 100;
     font-size: 25px;
     color: #073642;
-    font-family: "Source Code Pro", monospace;
+    font-family: 'Shadows Into Light', cursive;
   }
 }
 
@@ -32,7 +32,7 @@
   font-weight: 100;
   font-size: 34px;
   color: #073642;
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Shadows Into Light', cursive;
 }
 
 .dud {

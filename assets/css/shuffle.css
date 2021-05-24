@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=VT323&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap';
 
 /*.container {
   height: 100%;
@@ -12,9 +12,9 @@
 @media only screen and (min-width: 600px) {
   .text {
     font-weight: 100;
-    font-size: 30px;
+    font-size: 25px;
     color: #073642;
-    font-family: 'VT323', monospace;
+    font-family: 'JetBrains Mono', monospace;
   }
 }
 
@@ -24,15 +24,15 @@
     font-weight: 100;
     font-size: 25px;
     color: #073642;
-    font-family: 'VT323', monospace;
+    font-family: 'JetBrains Mono', monospace;
   }
 }
 
 .text {
   font-weight: 100;
-  font-size: 38px;
+  font-size: 34px;
   color: #073642;
-  font-family: 'VT323', monospace;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .dud {

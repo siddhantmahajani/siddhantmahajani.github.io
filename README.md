@@ -1,1 +1,0 @@
-Hi I am Siddhant. I am a Software Engineer, Backend Developer, Full Stack Developer.

@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap';
 
 #overlay{
     position:fixed;
@@ -19,7 +19,7 @@
   }
   #progstat{
     font-size:0.7em;
-    font-family: "Roboto Mono", monospace;
+    font-family: "Crimson Text", serif;
     letter-spacing: 3px;
     position:absolute;
     top:50%;

@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=VT323&display=swap';
 
 #overlay{
     position:fixed;
@@ -19,7 +19,7 @@
   }
   #progstat{
     font-size:0.7em;
-    font-family: "Source Code Pro", monospace;
+    font-family: 'VT323', monospace;
     letter-spacing: 3px;
     position:absolute;
     top:50%;

@@ -7,12 +7,12 @@
     left:0;
     bottom:0;
     right:0;
-    background: #fdf6e3;
+    background: #ddeaf1;
     transition: 1s 0.4s;
   }
   #progress{
     height:1px;
-    background: #0072b1;
+    background: #073642;
     position:absolute;
     width:0;
     top:50%;

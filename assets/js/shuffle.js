@@ -75,7 +75,7 @@ class TextScramble {
     "I'm a Software Engineer",
     "a Backend Developer",
     "a Full Stack Developer",
-    "an Aspiring Data Scientist",
+    "an Aspiring Data Analyst",
     "from Pune, India"
   ]
   

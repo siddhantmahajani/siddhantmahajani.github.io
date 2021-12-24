@@ -7,12 +7,12 @@
     left:0;
     bottom:0;
     right:0;
-    background: #f7fcff;
+    background: #f7f7f7;
     transition: 1s 0.4s;
   }
   #progress{
     height:1px;
-    background: #073642;
+    background: #44474e;
     position:absolute;
     width:0;
     top:50%;
@@ -26,5 +26,5 @@
     margin-top:-40px;
     width:100%;
     text-align:center;
-    color: #073642;
+    color: #44474e;
   }

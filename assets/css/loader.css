@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=VT323&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Special+Elite&display=swap';
 
 #overlay{
     position:fixed;
@@ -7,24 +7,24 @@
     left:0;
     bottom:0;
     right:0;
-    background: #f7f7f7;
+    background: #14171A;
     transition: 1s 0.4s;
   }
   #progress{
     height:1px;
-    background: #44474e;
+    background: #1da1f2;
     position:absolute;
     width:0;
     top:50%;
   }
   #progstat{
     font-size:0.7em;
-    font-family: 'VT323', monospace;
+    font-family: 'Special Elite', cursive;
     letter-spacing: 3px;
     position:absolute;
     top:50%;
     margin-top:-40px;
     width:100%;
     text-align:center;
-    color: #44474e;
+    color: #e1e8ed;
   }

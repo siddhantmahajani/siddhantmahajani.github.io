@@ -1,13 +1,13 @@
 @import 'https://fonts.googleapis.com/css2?family=Special+Elite&display=swap';
 
 #overlay{
-    position:fixed;
+    position:absolute;
     z-index:99999;
     top:0;
     left:0;
     bottom:0;
     right:0;
-    background: #000;
+    background: #fff;
     transition: 1s 0.4s;
   }
   #progress{
@@ -26,5 +26,5 @@
     margin-top:-40px;
     width:100%;
     text-align:center;
-    color: #fff;
+    color: #000;
   }

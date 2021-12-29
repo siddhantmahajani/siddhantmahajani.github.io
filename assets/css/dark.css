@@ -7,8 +7,8 @@
 body {
   font-family: 'PT Sans', sans-serif;
   font-size: 14px;
-  background-color: #fff;
-  color: #fff;
+  background-color: #eee8d5;
+  color: #eee8d5;
   position: relative;
   background: transparent;
 }
@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header h1 a, #header h1 a:hover {
-  color: #fff;
+  color: #eee8d5;
   line-height: 1;
   display: inline-block;
 }
@@ -79,11 +79,11 @@ h1, h2, h3, h4, h5, h6 {
 #header h2 {
   font-size: 24px;
   margin-top: 20px;
-  color: #fff;
+  color: #eee8d5;
 }
 
 #header h2 span {
-  color: #fff;
+  color: #eee8d5;
   border-bottom: 2px solid #d86f57;
   padding-bottom: 6px;
 }
@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   background: #042331;
-  color: #fff;
+  color: #eee8d5;
   line-height: 1;
   margin-right: 8px;
   border-radius: 50%;
@@ -156,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: #fff;
+  color: #eee8d5;
   font-size: 14px;
   font-family: 'PT Sans', sans-serif;
   font-weight: 400;
@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #fff;
+  color: #eee8d5;
   text-decoration: none;
 }
 
@@ -202,7 +202,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #fff;
+  color: #eee8d5;
 }
 
 .mobile-nav {
@@ -231,7 +231,7 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav a {
   display: block;
   position: relative;
-  color: #fff;
+  color: #eee8d5;
   padding: 10px 20px;
   font-weight: 500;
   outline: none;
@@ -265,7 +265,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-active .mobile-nav-toggle i {
-  color: #fff;
+  color: #eee8d5;
 }
 
 /* Header Top */
@@ -348,7 +348,7 @@ section .container {
   margin: 0 0 20px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #fff;
+  color: #eee8d5;
   font-family: 'PT Sans', sans-serif;
 }
 
@@ -368,7 +368,7 @@ section .container {
   font-weight: 700;
   text-transform: uppercase;
   font-family: 'PT Sans', sans-serif;
-  color: #fff;
+  color: #eee8d5;
 }
 
 /*--------------------------------------------------------------
@@ -420,7 +420,7 @@ section .container {
   left: 50%;
   transform: translateX(-50%);
   font-size: 24px;
-  background: #fff;
+  background: #eee8d5;
   padding: 12px;
   color: #d86f57;
   border-radius: 50px;
@@ -430,7 +430,7 @@ section .container {
   font-size: 36px;
   display: block;
   font-weight: 600;
-  color: #fff;
+  color: #eee8d5;
 }
 
 .counts .count-box p {
@@ -456,7 +456,7 @@ section .container {
   display: block;
   font-weight: 600;
   font-family: 'PT Sans', sans-serif;
-  color: #fff;
+  color: #eee8d5;
 }
 
 .skills .progress .skill .val {
@@ -482,7 +482,7 @@ section .container {
   display: flex;
   align-items: center;
   padding: 20px;
-  background: #fff;
+  background: #eee8d5;
   transition: ease-in-out 0.3s;
 }
 
@@ -498,7 +498,7 @@ section .container {
   padding: 0;
   line-height: 1;
   font-size: 14px;
-  color: #fff;
+  color: #eee8d5;
 }
 
 .interests .icon-box:hover {
@@ -526,17 +526,17 @@ section .container {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 45px;
-  color: #fff;
+  color: #eee8d5;
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: #fff;
+  color: #eee8d5;
   margin: 0 0 0 45px;
 }
 
 .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
-  color: #fff;
+  color: #eee8d5;
   font-size: 26px;
 }
 
@@ -596,7 +596,7 @@ section .container {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #fff;
+  color: #eee8d5;
 }
 
 .resume .resume-item {
@@ -674,7 +674,7 @@ section .container {
 }
 
 .services .icon-box .icon i {
-  color: #fff;
+  color: #eee8d5;
   font-size: 28px;
 }
 
@@ -698,7 +698,7 @@ section .container {
 }
 
 .services .icon-box h4 a {
-  color: #fff;
+  color: #eee8d5;
 }
 
 .services .icon-box p {
@@ -725,7 +725,7 @@ section .container {
 }
 
 .services .icon-box:hover h4 a, .services .icon-box:hover p {
-  color: #fff;
+  color: #eee8d5;
 }
 
 /*--------------------------------------------------------------
@@ -752,7 +752,7 @@ section .container {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #fff;
+  color: #eee8d5;
   background: #042331;
   margin: 0 3px 10px 3px;
   transition: all 0.3s ease-in-out;
@@ -834,12 +834,12 @@ section .container {
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
-  color: #fff;
+  color: #eee8d5;
   font-weight: 600;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
-  color: #fff;
+  color: #eee8d5;
   font-size: 14px;
   text-transform: uppercase;
   padding: 0;
@@ -852,7 +852,7 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a {
-  color: #fff;
+  color: #eee8d5;
   margin: 0 2px;
   font-size: 28px;
   display: inline-block;
@@ -889,7 +889,7 @@ section .container {
 # Contact
 --------------------------------------------------------------*/
 .contact .info-box {
-  color: #fff;
+  color: #eee8d5;
   padding: 20px;
   width: 100%;
   background: #042331;
@@ -906,14 +906,14 @@ section .container {
 
 .contact .info-box h3 {
   font-size: 20px;
-  color: #fff;
+  color: #eee8d5;
   font-weight: 700;
   margin: 10px 0 8px 68px;
 }
 
 .contact .info-box p {
   padding: 0;
-  color: #fff;
+  color: #eee8d5;
   line-height: 24px;
   font-size: 14px;
   margin: 0 0 0 68px;
@@ -927,7 +927,7 @@ section .container {
 .contact .info-box .social-links a {
   font-size: 18px;
   display: inline-block;
-  color: #fff;
+  color: #eee8d5;
   line-height: 1;
   margin-right: 12px;
   transition: 0.3s;
@@ -999,7 +999,7 @@ section .container {
   background: #042331;
   border: 0;
   transition: 0.3s;
-  color: #fff;
+  color: #eee8d5;
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
@@ -1043,7 +1043,7 @@ section .container {
   background: #d86f57;
   border: 0;
   padding: 10px 30px;
-  color: #fff;
+  color: #eee8d5;
   transition: 0.4s;
   border-radius: 4px;
 }
@@ -1155,7 +1155,7 @@ section .container {
   padding: 15px;
   text-align: right;
   font-size: 13px;
-  color: #fff;
+  color: #eee8d5;
   z-index: 999999;
 }
 
@@ -1173,5 +1173,5 @@ section .container {
 }
 
 .credits a:hover {
-  color: #fff;
+  color: #eee8d5;
 }

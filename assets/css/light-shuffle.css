@@ -13,7 +13,7 @@
   .text {
     font-weight: 100;
     font-size: 25px;
-    color: #000;
+    color: #434343;
     font-family: 'Special Elite', cursive;
   }
 }
@@ -23,7 +23,7 @@
   .text {
     font-weight: 100;
     font-size: 25px;
-    color: #000;
+    color: #434343;
     font-family: 'Special Elite', cursive;
   }
 }
@@ -31,10 +31,10 @@
 .text {
   font-weight: 100;
   font-size: 34px;
-  color: #000;
+  color: #434343;
   font-family: 'Special Elite', cursive;
 }
 
 .dud {
-  color: #000;
+  color: #434343;
 }

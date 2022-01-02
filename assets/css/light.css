@@ -2,13 +2,13 @@
 # General
 --------------------------------------------------------------*/
 
-@import 'https://fonts.googleapis.com/css2?family=PT+Serif&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap';
 
 body {
-  font-family: 'PT Serif', serif;
+  font-family: 'Merriweather', serif;
   font-size: 14px;
-  background-color: #434343;
-  color: #434343;
+  background-color: #111;
+  color: #111;
   position: relative;
   background: transparent;
 }
@@ -16,7 +16,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #eef7fb top right no-repeat;
+  background: #fff top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -41,7 +41,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'PT Serif', serif;
+  font-family: 'Merriweather', serif;
 }
 
 /*--------------------------------------------------------------
@@ -67,11 +67,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  font-family: 'PT Serif', serif;
+  font-family: 'Merriweather', serif;
 }
 
 #header h1 a, #header h1 a:hover {
-  color: #434343;
+  color: #111;
   line-height: 1;
   display: inline-block;
 }
@@ -79,11 +79,11 @@ h1, h2, h3, h4, h5, h6 {
 #header h2 {
   font-size: 24px;
   margin-top: 20px;
-  color: #434343;
+  color: #111;
 }
 
 #header h2 span {
-  color: #434343;
+  color: #111;
   border-bottom: 2px solid #d86f57;
   padding-bottom: 6px;
 }
@@ -103,8 +103,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #eef7fb;
-  color: #434343;
+  background: #fff;
+  color: #111;
   line-height: 1;
   margin-right: 8px;
   border-radius: 50%;
@@ -156,9 +156,9 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: #434343;
+  color: #111;
   font-size: 14px;
-  font-family: 'PT Serif', serif;
+  font-family: 'Merriweather', serif;
   font-weight: 400;
 }
 
@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #434343;
+  color: #111;
   text-decoration: none;
 }
 
@@ -202,7 +202,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #434343;
+  color: #111;
 }
 
 .mobile-nav {
@@ -213,13 +213,13 @@ h1, h2, h3, h4, h5, h6 {
   left: 15px;
   z-index: 9999;
   overflow-y: auto;
-  background: #eef7fb;
+  background: #fff;
   transition: ease-in-out 0.2s;
   opacity: 0;
   visibility: hidden;
   border-radius: 10px;
   padding: 10px 0;
-  border: 2px solid #eef7fb;
+  border: 2px solid #fff;
 }
 
 .mobile-nav * {
@@ -231,7 +231,7 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav a {
   display: block;
   position: relative;
-  color: #434343;
+  color: #111;
   padding: 10px 20px;
   font-weight: 500;
   outline: none;
@@ -249,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   position: fixed;
-  background: #eef7fb;
+  background: #fff;
   overflow: hidden;
   display: none;
   transition: ease-in-out 0.2s;
@@ -265,7 +265,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-active .mobile-nav-toggle i {
-  color: #434343;
+  color: #111;
 }
 
 /* Header Top */
@@ -275,7 +275,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   top: 0;
   right: 0;
-  background: #eef7fb;
+  background: #fff;
 }
 
 #header.header-top .social-links, #header.header-top h2 {
@@ -327,7 +327,7 @@ section.section-show {
 }
 
 section .container {
-  background: #eef7fb;
+  background: #fff;
   padding: 30px;
 }
 
@@ -348,8 +348,8 @@ section .container {
   margin: 0 0 20px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #434343;
-  font-family: 'PT Serif', serif;
+  color: #111;
+  font-family: 'Merriweather', serif;
 }
 
 .section-title h2::after {
@@ -367,8 +367,8 @@ section .container {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'PT Serif', serif;
-  color: #434343;
+  font-family: 'Merriweather', serif;
+  color: #111;
 }
 
 /*--------------------------------------------------------------
@@ -411,7 +411,7 @@ section .container {
   width: 100%;
   position: relative;
   text-align: center;
-  background: #eef7fb;
+  background: #fff;
 }
 
 .counts .count-box i {
@@ -420,7 +420,7 @@ section .container {
   left: 50%;
   transform: translateX(-50%);
   font-size: 24px;
-  background: #434343;
+  background: #111;
   padding: 12px;
   color: #d86f57;
   border-radius: 50px;
@@ -430,13 +430,13 @@ section .container {
   font-size: 36px;
   display: block;
   font-weight: 600;
-  color: #434343;
+  color: #111;
 }
 
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: 'PT Serif', serif;
+  font-family: 'Merriweather', serif;
   font-size: 14px;
 }
 
@@ -455,8 +455,8 @@ section .container {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: 'PT Serif', serif;
-  color: #434343;
+  font-family: 'Merriweather', serif;
+  color: #111;
 }
 
 .skills .progress .skill .val {
@@ -465,7 +465,7 @@ section .container {
 }
 
 .skills .progress-bar-wrap {
-  background: #eef7fb;
+  background: #fff;
 }
 
 .skills .progress-bar {
@@ -482,7 +482,7 @@ section .container {
   display: flex;
   align-items: center;
   padding: 20px;
-  background: #434343;
+  background: #111;
   transition: ease-in-out 0.3s;
 }
 
@@ -498,7 +498,7 @@ section .container {
   padding: 0;
   line-height: 1;
   font-size: 14px;
-  color: #434343;
+  color: #111;
 }
 
 .interests .icon-box:hover {
@@ -526,17 +526,17 @@ section .container {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 45px;
-  color: #434343;
+  color: #111;
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: #434343;
+  color: #111;
   margin: 0 0 0 45px;
 }
 
 .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
-  color: #434343;
+  color: #111;
   font-size: 26px;
 }
 
@@ -557,7 +557,7 @@ section .container {
   font-style: italic;
   margin: 0 15px 0 15px;
   padding: 20px 20px 60px 20px;
-  background: #eef7fb;
+  background: #fff;
   position: relative;
   border-radius: 6px;
   position: relative;
@@ -575,7 +575,7 @@ section .container {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #eef7fb !important;
+  background-color: #fff !important;
 }
 
 .testimonials .owl-dot.active {
@@ -596,7 +596,7 @@ section .container {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #434343;
+  color: #111;
 }
 
 .resume .resume-item {
@@ -611,14 +611,14 @@ section .container {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: 'PT Serif', serif;
+  font-family: 'Merriweather', serif;
   color: #d86f57;
   margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
   font-size: 14px;
-  background: #eef7fb;
+  background: #fff;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
@@ -674,7 +674,7 @@ section .container {
 }
 
 .services .icon-box .icon i {
-  color: #434343;
+  color: #111;
   font-size: 28px;
 }
 
@@ -685,7 +685,7 @@ section .container {
   top: -8px;
   height: 100%;
   width: 100%;
-  background: #eef7fb;
+  background: #fff;
   border-radius: 5px;
   transition: all .3s ease-out 0s;
   transform: translateZ(-1px);
@@ -698,7 +698,7 @@ section .container {
 }
 
 .services .icon-box h4 a {
-  color: #434343;
+  color: #111;
 }
 
 .services .icon-box p {
@@ -713,7 +713,7 @@ section .container {
 }
 
 .services .icon-box:hover .icon {
-  background: #eef7fb;
+  background: #fff;
 }
 
 .services .icon-box:hover .icon i {
@@ -725,7 +725,7 @@ section .container {
 }
 
 .services .icon-box:hover h4 a, .services .icon-box:hover p {
-  color: #434343;
+  color: #111;
 }
 
 /*--------------------------------------------------------------
@@ -752,8 +752,8 @@ section .container {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #434343;
-  background: #eef7fb;
+  color: #111;
+  background: #fff;
   margin: 0 3px 10px 3px;
   transition: all 0.3s ease-in-out;
   border-radius: 4px;
@@ -772,12 +772,12 @@ section .container {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: #eef7fb;
+  background: #fff;
 }
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: #eef7fb;
+  background: #fff;
   position: absolute;
   left: 30px;
   right: 30px;
@@ -812,8 +812,8 @@ section .container {
   position: absolute;
   top: 35px;
   left: 35px;
-  border-top: 3px solid #eef7fb;
-  border-left: 3px solid #eef7fb;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
@@ -826,20 +826,20 @@ section .container {
   position: absolute;
   bottom: 35px;
   right: 35px;
-  border-bottom: 3px solid #eef7fb;
-  border-right: 3px solid #eef7fb;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
-  color: #434343;
+  color: #111;
   font-weight: 600;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
-  color: #434343;
+  color: #111;
   font-size: 14px;
   text-transform: uppercase;
   padding: 0;
@@ -852,7 +852,7 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a {
-  color: #434343;
+  color: #111;
   margin: 0 2px;
   font-size: 28px;
   display: inline-block;
@@ -889,10 +889,10 @@ section .container {
 # Contact
 --------------------------------------------------------------*/
 .contact .info-box {
-  color: #434343;
+  color: #111;
   padding: 20px;
   width: 100%;
-  background: #eef7fb;
+  background: #fff;
 }
 
 .contact .info-box i.bx {
@@ -901,19 +901,19 @@ section .container {
   border-radius: 50%;
   padding: 14px;
   float: left;
-  background: #eef7fb;
+  background: #fff;
 }
 
 .contact .info-box h3 {
   font-size: 20px;
-  color: #434343;
+  color: #111;
   font-weight: 700;
   margin: 10px 0 8px 68px;
 }
 
 .contact .info-box p {
   padding: 0;
-  color: #434343;
+  color: #111;
   line-height: 24px;
   font-size: 14px;
   margin: 0 0 0 68px;
@@ -927,7 +927,7 @@ section .container {
 .contact .info-box .social-links a {
   font-size: 18px;
   display: inline-block;
-  color: #434343;
+  color: #111;
   line-height: 1;
   margin-right: 12px;
   transition: 0.3s;
@@ -939,7 +939,7 @@ section .container {
 
 .contact .php-email-form {
   padding: 30px;
-  background: #eef7fb;
+  background: #fff;
 }
 
 .contact .php-email-form .validate {
@@ -952,7 +952,7 @@ section .container {
 
 .contact .php-email-form .error-message {
   display: none;
-  background: #eef7fb;
+  background: #fff;
   background: #ed3c0d;
   text-align: left;
   padding: 15px;
@@ -965,7 +965,7 @@ section .container {
 
 .contact .php-email-form .sent-message {
   display: none;
-  background: #eef7fb;
+  background: #fff;
   background: #d86f57;
   text-align: center;
   padding: 15px;
@@ -974,7 +974,7 @@ section .container {
 
 .contact .php-email-form .loading {
   display: none;
-  background: #eef7fb;
+  background: #fff;
   text-align: center;
   padding: 15px;
 }
@@ -987,7 +987,7 @@ section .container {
   height: 24px;
   margin: 0 10px -6px 0;
   border: 3px solid #d86f57;
-  border-top-color: #eef7fb;
+  border-top-color: #fff;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
 }
@@ -996,38 +996,38 @@ section .container {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
-  background: #eef7fb;
+  background: #fff;
   border: 0;
   transition: 0.3s;
-  color: #434343;
+  color: #111;
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  background-color: #eef7fb;
+  background-color: #fff;
 }
 
 .contact .php-email-form input::-webkit-input-placeholder, .contact .php-email-form textarea::-webkit-input-placeholder {
-  color: #eef7fb;
+  color: #fff;
   opacity: 1;
 }
 
 .contact .php-email-form input::-moz-placeholder, .contact .php-email-form textarea::-moz-placeholder {
-  color: #eef7fb;
+  color: #fff;
   opacity: 1;
 }
 
 .contact .php-email-form input:-ms-input-placeholder, .contact .php-email-form textarea:-ms-input-placeholder {
-  color: #eef7fb;
+  color: #fff;
   opacity: 1;
 }
 
 .contact .php-email-form input::-ms-input-placeholder, .contact .php-email-form textarea::-ms-input-placeholder {
-  color: #eef7fb;
+  color: #fff;
   opacity: 1;
 }
 
 .contact .php-email-form input::placeholder, .contact .php-email-form textarea::placeholder {
-  color: #eef7fb;
+  color: #fff;
   opacity: 1;
 }
 
@@ -1043,7 +1043,7 @@ section .container {
   background: #d86f57;
   border: 0;
   padding: 10px 30px;
-  color: #434343;
+  color: #111;
   transition: 0.4s;
   border-radius: 4px;
 }
@@ -1075,7 +1075,7 @@ section .container {
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
-  background: #eef7fb;
+  background: #fff;
   position: fixed;
   left: 0;
   right: 0;
@@ -1106,7 +1106,7 @@ section .container {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #eef7fb !important;
+  background-color: #fff !important;
 }
 
 .portfolio-details .portfolio-details-carousel .owl-dot.active {
@@ -1155,7 +1155,7 @@ section .container {
   padding: 15px;
   text-align: right;
   font-size: 13px;
-  color: #434343;
+  color: #111;
   z-index: 999999;
 }
 
@@ -1163,7 +1163,7 @@ section .container {
   .credits {
     text-align: center;
     padding: 10px;
-    background: #eef7fb;
+    background: #fff;
   }
 }
 
@@ -1173,5 +1173,5 @@ section .container {
 }
 
 .credits a:hover {
-  color: #434343;
+  color: #111;
 }

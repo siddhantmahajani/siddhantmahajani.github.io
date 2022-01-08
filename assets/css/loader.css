@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Pompiere&display=swap';
 
 #overlay{
     position:absolute;
@@ -19,7 +19,7 @@
   }
   #progstat{
     font-size:0.7em;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Pompiere', cursive;
     letter-spacing: 3px;
     position:absolute;
     top:50%;

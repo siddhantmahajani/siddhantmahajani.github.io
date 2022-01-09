@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=Pompiere&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Special+Elite&display=swap';
 
 #overlay{
     position:absolute;
@@ -19,7 +19,7 @@
   }
   #progstat{
     font-size:0.7em;
-    font-family: 'Pompiere', cursive;
+    font-family: 'Special Elite', cursive;
     letter-spacing: 3px;
     position:absolute;
     top:50%;

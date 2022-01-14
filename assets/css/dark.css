@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Merriweather', serif;
-  font-size: 14px;
+  font-size: 13px;
   background-color: #f7f7f7;
   color: #f7f7f7;
   position: relative;
@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .social-links a {
-  font-size: 14px;
+  font-size: 13px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   position: relative;
   color: #f7f7f7;
-  font-size: 14px;
+  font-size: 13px;
   font-family: 'Merriweather', serif;
   font-weight: 400;
 }
@@ -341,7 +341,7 @@ section .container {
 }
 
 .section-title h2 {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   padding: 0;
   line-height: 1px;
@@ -437,7 +437,7 @@ section .container {
   padding: 0;
   margin: 0;
   font-family: 'Merriweather', serif;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /*--------------------------------------------------------------
@@ -497,7 +497,7 @@ section .container {
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-size: 14px;
+  font-size: 13px;
   color: #f7f7f7;
 }
 
@@ -530,7 +530,7 @@ section .container {
 }
 
 .testimonials .testimonial-item h4 {
-  font-size: 14px;
+  font-size: 13px;
   color: #f7f7f7;
   margin: 0 0 0 45px;
 }
@@ -617,7 +617,7 @@ section .container {
 }
 
 .resume .resume-item h5 {
-  font-size: 14px;
+  font-size: 13px;
   background: #071A25;
   padding: 5px 15px;
   display: inline-block;
@@ -640,8 +640,8 @@ section .container {
 .resume .resume-item::before {
   content: "";
   position: absolute;
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   border-radius: 50px;
   left: -9px;
   top: 0;
@@ -703,7 +703,7 @@ section .container {
 
 .services .icon-box p {
   line-height: 24px;
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 0;
 }
 
@@ -747,8 +747,8 @@ section .container {
 .portfolio #portfolio-flters li {
   cursor: pointer;
   display: inline-block;
-  padding: 8px 14px 10px 14px;
-  font-size: 14px;
+  padding: 8px 13px 10px 13px;
+  font-size: 13px;
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
@@ -840,7 +840,7 @@ section .container {
 
 .portfolio .portfolio-wrap .portfolio-info p {
   color: #f7f7f7;
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -899,7 +899,7 @@ section .container {
   font-size: 24px;
   color: #d86f57;
   border-radius: 50%;
-  padding: 14px;
+  padding: 13px;
   float: left;
   background: #071A25;
 }
@@ -915,7 +915,7 @@ section .container {
   padding: 0;
   color: #f7f7f7;
   line-height: 24px;
-  font-size: 14px;
+  font-size: 13px;
   margin: 0 0 0 68px;
 }
 
@@ -995,7 +995,7 @@ section .container {
 .contact .php-email-form input, .contact .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
-  font-size: 14px;
+  font-size: 13px;
   background: #071A25;
   border: 0;
   transition: 0.3s;

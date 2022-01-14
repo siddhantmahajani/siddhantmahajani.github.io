@@ -13,7 +13,7 @@
   .text {
     font-weight: 100;
     font-size: 25px;
-    color: #f7f7f7;
+    color: #eee8d5;
     font-family: 'Sacramento', cursive;
   }
 }
@@ -23,7 +23,7 @@
   .text {
     font-weight: 100;
     font-size: 25px;
-    color: #f7f7f7;
+    color: #eee8d5;
     font-family: 'Sacramento', cursive;
   }
 }
@@ -31,10 +31,10 @@
 .text {
   font-weight: 100;
   font-size: 34px;
-  color: #f7f7f7;
+  color: #eee8d5;
   font-family: 'Sacramento', cursive;
 }
 
 .dud {
-  color: #f7f7f7;
+  color: #eee8d5;
 }

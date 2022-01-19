@@ -2,11 +2,11 @@
 # General
 --------------------------------------------------------------*/
 
-@import 'https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap';
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Helvetica Neue', sans-serif;
-  font-size: 14px;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 15px;
   background-color: #073642;
   color: #073642;
   position: relative;
@@ -41,7 +41,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 #header h1 a, #header h1 a:hover {
@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .social-links a {
-  font-size: 14px;
+  font-size: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,8 +157,8 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   position: relative;
   color: #073642;
-  font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
 }
 
@@ -341,7 +341,7 @@ section .container {
 }
 
 .section-title h2 {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   padding: 0;
   line-height: 1px;
@@ -349,7 +349,7 @@ section .container {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #bf0222;
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 .section-title h2::after {
@@ -367,7 +367,7 @@ section .container {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   color: #073642;
 }
 
@@ -436,8 +436,8 @@ section .container {
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Helvetica Neue', sans-serif;
-  font-size: 14px;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 15px;
 }
 
 /*--------------------------------------------------------------
@@ -455,7 +455,7 @@ section .container {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   color: #073642;
 }
 
@@ -497,7 +497,7 @@ section .container {
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-size: 14px;
+  font-size: 15px;
   color: #073642;
 }
 
@@ -530,7 +530,7 @@ section .container {
 }
 
 .testimonials .testimonial-item h4 {
-  font-size: 14px;
+  font-size: 15px;
   color: #073642;
   margin: 0 0 0 45px;
 }
@@ -611,13 +611,13 @@ section .container {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   color: #bf0222;
   margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
-  font-size: 14px;
+  font-size: 15px;
   background: #fdf6e3;
   padding: 5px 15px;
   display: inline-block;
@@ -640,8 +640,8 @@ section .container {
 .resume .resume-item::before {
   content: "";
   position: absolute;
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
   border-radius: 50px;
   left: -9px;
   top: 0;
@@ -703,7 +703,7 @@ section .container {
 
 .services .icon-box p {
   line-height: 24px;
-  font-size: 14px;
+  font-size: 15px;
   margin-bottom: 0;
 }
 
@@ -747,8 +747,8 @@ section .container {
 .portfolio #portfolio-flters li {
   cursor: pointer;
   display: inline-block;
-  padding: 8px 14px 10px 14px;
-  font-size: 14px;
+  padding: 8px 15px 10px 15px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
@@ -840,7 +840,7 @@ section .container {
 
 .portfolio .portfolio-wrap .portfolio-info p {
   color: #073642;
-  font-size: 14px;
+  font-size: 15px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -899,7 +899,7 @@ section .container {
   font-size: 24px;
   color: #bf0222;
   border-radius: 50%;
-  padding: 14px;
+  padding: 15px;
   float: left;
   background: #fdf6e3;
 }
@@ -915,7 +915,7 @@ section .container {
   padding: 0;
   color: #073642;
   line-height: 24px;
-  font-size: 14px;
+  font-size: 15px;
   margin: 0 0 0 68px;
 }
 
@@ -947,7 +947,7 @@ section .container {
   color: red;
   margin: 0 0 15px 0;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .contact .php-email-form .error-message {
@@ -995,7 +995,7 @@ section .container {
 .contact .php-email-form input, .contact .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
-  font-size: 14px;
+  font-size: 15px;
   background: #fdf6e3;
   border: 0;
   transition: 0.3s;
@@ -1154,7 +1154,7 @@ section .container {
   bottom: 0;
   padding: 15px;
   text-align: right;
-  font-size: 14px;
+  font-size: 15px;
   color: #073642;
   z-index: 999999;
 }

@@ -2,11 +2,11 @@
 # General
 --------------------------------------------------------------*/
 
-@import 'https://fonts.googleapis.com/css2?family=PT+Sans&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Sora&display=swap';
 
 body {
-  font-family: 'PT Sans', sans-serif;
-  font-size: 15px;
+  font-family: 'Sora', sans-serif;
+  font-size: 14px;
   background-color: #073642;
   color: #073642;
   position: relative;
@@ -41,7 +41,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Sora', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Sora', sans-serif;
 }
 
 #header h1 a, #header h1 a:hover {
@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .social-links a {
-  font-size: 15px;
+  font-size: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 30px;
   }
   #header .social-links {
-    margin-top: 15px;
+    margin-top: 14px;
   }
   #header .container {
     display: flex;
@@ -157,8 +157,8 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   position: relative;
   color: #073642;
-  font-size: 15px;
-  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  font-family: 'Sora', sans-serif;
   font-weight: 400;
 }
 
@@ -188,8 +188,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
-  right: 15px;
-  top: 15px;
+  right: 14px;
+  top: 14px;
   z-index: 9998;
   border: 0;
   background: none;
@@ -208,9 +208,9 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav {
   position: fixed;
   top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
+  right: 14px;
+  bottom: 14px;
+  left: 14px;
   z-index: 9999;
   overflow-y: auto;
   background: #fff;
@@ -341,7 +341,7 @@ section .container {
 }
 
 .section-title h2 {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   padding: 0;
   line-height: 1px;
@@ -349,7 +349,7 @@ section .container {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #0074b7;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Sora', sans-serif;
 }
 
 .section-title h2::after {
@@ -363,11 +363,11 @@ section .container {
 
 .section-title p {
   margin: 0;
-  margin: -15px 0 15px 0;
+  margin: -14px 0 14px 0;
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Sora', sans-serif;
   color: #073642;
 }
 
@@ -436,8 +436,8 @@ section .container {
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: 'PT Sans', sans-serif;
-  font-size: 15px;
+  font-family: 'Sora', sans-serif;
+  font-size: 14px;
 }
 
 /*--------------------------------------------------------------
@@ -455,7 +455,7 @@ section .container {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Sora', sans-serif;
   color: #073642;
 }
 
@@ -497,7 +497,7 @@ section .container {
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-size: 15px;
+  font-size: 14px;
   color: #073642;
 }
 
@@ -523,14 +523,14 @@ section .container {
 }
 
 .testimonials .testimonial-item h3 {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   margin: 10px 0 5px 45px;
   color: #073642;
 }
 
 .testimonials .testimonial-item h4 {
-  font-size: 15px;
+  font-size: 14px;
   color: #073642;
   margin: 0 0 0 45px;
 }
@@ -555,7 +555,7 @@ section .container {
 
 .testimonials .testimonial-item p {
   font-style: italic;
-  margin: 0 15px 0 15px;
+  margin: 0 14px 0 14px;
   padding: 20px 20px 60px 20px;
   background: #fff;
   position: relative;
@@ -607,19 +607,19 @@ section .container {
 }
 
 .resume .resume-item h4 {
-  line-height: 15px;
-  font-size: 15px;
+  line-height: 14px;
+  font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Sora', sans-serif;
   color: #0074b7;
   margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
-  font-size: 15px;
+  font-size: 14px;
   background: #fff;
-  padding: 5px 15px;
+  padding: 5px 14px;
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
@@ -640,8 +640,8 @@ section .container {
 .resume .resume-item::before {
   content: "";
   position: absolute;
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   border-radius: 50px;
   left: -9px;
   top: 0;
@@ -693,7 +693,7 @@ section .container {
 
 .services .icon-box h4 {
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   font-size: 24px;
 }
 
@@ -703,7 +703,7 @@ section .container {
 
 .services .icon-box p {
   line-height: 24px;
-  font-size: 15px;
+  font-size: 14px;
   margin-bottom: 0;
 }
 
@@ -737,18 +737,18 @@ section .container {
 
 .portfolio #portfolio-flters {
   padding: 0;
-  margin: 0 auto 15px auto;
+  margin: 0 auto 14px auto;
   list-style: none;
   text-align: center;
   border-radius: 50px;
-  padding: 2px 15px;
+  padding: 2px 14px;
 }
 
 .portfolio #portfolio-flters li {
   cursor: pointer;
   display: inline-block;
-  padding: 8px 15px 10px 15px;
-  font-size: 15px;
+  padding: 8px 14px 10px 14px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
@@ -840,7 +840,7 @@ section .container {
 
 .portfolio .portfolio-wrap .portfolio-info p {
   color: #073642;
-  font-size: 15px;
+  font-size: 14px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -876,13 +876,13 @@ section .container {
 }
 
 .portfolio .portfolio-wrap:hover .portfolio-info::before {
-  top: 15px;
-  left: 15px;
+  top: 14px;
+  left: 14px;
 }
 
 .portfolio .portfolio-wrap:hover .portfolio-info::after {
-  bottom: 15px;
-  right: 15px;
+  bottom: 14px;
+  right: 14px;
 }
 
 /*--------------------------------------------------------------
@@ -899,7 +899,7 @@ section .container {
   font-size: 24px;
   color: #0074b7;
   border-radius: 50%;
-  padding: 15px;
+  padding: 14px;
   float: left;
   background: #fff;
 }
@@ -915,7 +915,7 @@ section .container {
   padding: 0;
   color: #073642;
   line-height: 24px;
-  font-size: 15px;
+  font-size: 14px;
   margin: 0 0 0 68px;
 }
 
@@ -925,7 +925,7 @@ section .container {
 }
 
 .contact .info-box .social-links a {
-  font-size: 15px;
+  font-size: 14px;
   display: inline-block;
   color: #073642;
   line-height: 1;
@@ -945,9 +945,9 @@ section .container {
 .contact .php-email-form .validate {
   display: none;
   color: red;
-  margin: 0 0 15px 0;
+  margin: 0 0 14px 0;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .contact .php-email-form .error-message {
@@ -955,7 +955,7 @@ section .container {
   background: #fff;
   background: #ed3c0d;
   text-align: left;
-  padding: 15px;
+  padding: 14px;
   font-weight: 600;
 }
 
@@ -968,7 +968,7 @@ section .container {
   background: #fff;
   background: #0074b7;
   text-align: center;
-  padding: 15px;
+  padding: 14px;
   font-weight: 600;
 }
 
@@ -976,7 +976,7 @@ section .container {
   display: none;
   background: #fff;
   text-align: center;
-  padding: 15px;
+  padding: 14px;
 }
 
 .contact .php-email-form .loading:before {
@@ -995,7 +995,7 @@ section .container {
 .contact .php-email-form input, .contact .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
-  font-size: 15px;
+  font-size: 14px;
   background: #fff;
   border: 0;
   transition: 0.3s;
@@ -1032,11 +1032,11 @@ section .container {
 }
 
 .contact .php-email-form input {
-  padding: 20px 15px;
+  padding: 20px 14px;
 }
 
 .contact .php-email-form textarea {
-  padding: 12px 15px;
+  padding: 12px 14px;
 }
 
 .contact .php-email-form button[type="submit"] {
@@ -1126,7 +1126,7 @@ section .container {
 .portfolio-details .portfolio-info ul {
   list-style: none;
   padding: 0;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .portfolio-details .portfolio-info ul li + li {
@@ -1134,8 +1134,8 @@ section .container {
 }
 
 .portfolio-details .portfolio-info p {
-  font-size: 15px;
-  padding: 15px 0 0 0;
+  font-size: 14px;
+  padding: 14px 0 0 0;
 }
 
 @media (max-width: 992px) {
@@ -1152,9 +1152,9 @@ section .container {
   right: 0;
   left: 0;
   bottom: 0;
-  padding: 15px;
+  padding: 14px;
   text-align: right;
-  font-size: 15px;
+  font-size: 14px;
   color: #073642;
   z-index: 999999;
 }

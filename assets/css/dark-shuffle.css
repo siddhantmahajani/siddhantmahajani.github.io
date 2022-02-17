@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=Lobster&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Redressed&display=swap';
 
 /*.container {
   height: 100%;
@@ -14,7 +14,7 @@
     font-weight: 100;
     font-size: 11px;
     color: #fff;
-    font-family: 'Lobster', cursive;
+    font-family: 'Redressed', cursive;
   }
 }
 
@@ -24,7 +24,7 @@
     font-weight: 100;
     font-size: 21px;
     color: #fff;
-    font-family: 'Lobster', cursive;
+    font-family: 'Redressed', cursive;
   }
 }
 
@@ -32,7 +32,7 @@
   font-weight: 100;
   font-size: 34px;
   color: #fff;
-  font-family: 'Lobster', cursive;
+  font-family: 'Redressed', cursive;
 }
 
 .dud {

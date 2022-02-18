@@ -13,7 +13,7 @@
   .text {
     font-weight: 100;
     font-size: 11px;
-    color: #fff;
+    color: #f7f7f7;
     font-family: 'Redressed', cursive;
   }
 }
@@ -23,7 +23,7 @@
   .text {
     font-weight: 100;
     font-size: 21px;
-    color: #fff;
+    color: #f7f7f7;
     font-family: 'Redressed', cursive;
   }
 }
@@ -31,10 +31,10 @@
 .text {
   font-weight: 100;
   font-size: 34px;
-  color: #fff;
+  color: #f7f7f7;
   font-family: 'Redressed', cursive;
 }
 
 .dud {
-  color: #fff;
+  color: #f7f7f7;
 }

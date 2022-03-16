@@ -74,7 +74,6 @@ class TextScramble {
     "I'm Siddhant Mahajani",
     "I'm a Software Engineer",
     "a Backend Developer",
-    "a Full Stack Developer",
     "an Aspiring Data Analyst",
     "from Pune, India"
   ]

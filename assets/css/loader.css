@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=Space+Mono&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap';
 
 #overlay{
     position:absolute;
@@ -7,24 +7,24 @@
     left:0;
     bottom:0;
     right:0;
-    background: #fff;
+    background: #000;
     transition: 1s 0.4s;
   }
   #progress{
     height:1px;
-    background: #b30000;
+    background: #d86f57;
     position:absolute;
     width:0;
     top:50%;
   }
   #progstat{
     font-size:0.7em;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Share Tech Mono', monospace;
     letter-spacing: 3px;
     position:absolute;
     top:50%;
     margin-top:-40px;
     width:100%;
     text-align:center;
-    color: #073642;
+    color: #f7f7f7;
   }

@@ -75,7 +75,7 @@ class TextScramble {
     "I'm a Software Engineer",
     "a Backend Developer",
     "an Aspiring Data Analyst",
-    "from Pune, India"
+    "from Dublin, Ireland"
   ]
   
   const el = document.querySelector('.text')

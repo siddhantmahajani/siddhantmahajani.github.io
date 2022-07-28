@@ -73,8 +73,7 @@ class TextScramble {
     "Hi 👋🏾,",
     "I'm Siddhant Mahajani",
     "I'm a Software Engineer",
-    "a Backend Developer",
-    "an Aspiring Data Analyst",
+    "a Data Analyst",
     "from Dublin, Ireland"
   ]
   

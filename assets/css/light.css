@@ -2,10 +2,10 @@
 # General
 --------------------------------------------------------------*/
 
-@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap';
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Mukta', sans-serif;
   font-size: 15px;
   background-color: #073642;
   color: #073642;
@@ -41,7 +41,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Mukta', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Mukta', sans-serif;
 }
 
 #header h1 a, #header h1 a:hover {
@@ -159,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   color: #073642;
   font-size: 15px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Mukta', sans-serif;
   font-weight: 400;
 }
 
@@ -350,7 +350,7 @@ section .container {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #b30000;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Mukta', sans-serif;
 }
 
 .section-title h2::after {
@@ -368,7 +368,7 @@ section .container {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Mukta', sans-serif;
   color: #073642;
 }
 
@@ -437,7 +437,7 @@ section .container {
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Mukta', sans-serif;
   font-size: 15px;
 }
 
@@ -456,7 +456,7 @@ section .container {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Mukta', sans-serif;
   color: #073642;
 }
 
@@ -612,7 +612,7 @@ section .container {
   font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Mukta', sans-serif;
   color: #b30000;
   margin-bottom: 10px;
 }

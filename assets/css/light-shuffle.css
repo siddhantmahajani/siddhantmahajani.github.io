@@ -13,7 +13,7 @@
   .text {
     font-weight: 100;
     font-size: 11px;
-    color: #333;
+    color: #073642;
     font-family: 'Source Code Pro', monospace;
   }
 }
@@ -23,7 +23,7 @@
   .text {
     font-weight: 100;
     font-size: 21px;
-    color: #333;
+    color: #073642;
     font-family: 'Source Code Pro', monospace;
   }
 }
@@ -31,10 +31,10 @@
 .text {
   font-weight: 100;
   font-size: 34px;
-  color: #333;
+  color: #073642;
   font-family: 'Source Code Pro', monospace;
 }
 
 .dud {
-  color: #333;
+  color: #073642;
 }

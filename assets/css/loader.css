@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Sono&display=swap';
 
 #overlay{
     position:absolute;
@@ -19,7 +19,7 @@
   }
   #progstat{
     font-size:0.7em;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Sono', sans-serif;
     letter-spacing: 3px;
     position:absolute;
     top:50%;

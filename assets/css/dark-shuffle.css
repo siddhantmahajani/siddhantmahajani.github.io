@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=Inconsolata&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Space+Mono&display=swap';
 
 /*.container {
   height: 100%;
@@ -12,19 +12,19 @@
 @media only screen and (min-width: 600px) {
   .text {
     font-weight: 100;
-    font-size: 11px;
+    font-size: 21px;
     color: #f7f7f7;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Space Mono', monospace;
   }
 }
 
 /* For mobile screens */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 400px) {
   .text {
     font-weight: 100;
-    font-size: 21px;
+    font-size: 11px;
     color: #f7f7f7;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Space Mono', monospace;
   }
 }
 
@@ -32,7 +32,7 @@
   font-weight: 100;
   font-size: 34px;
   color: #f7f7f7;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Space Mono', monospace;
 }
 
 .dud {

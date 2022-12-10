@@ -31,6 +31,18 @@ body::before {
   }
 }
 
+@media only screen and (min-width: 400px) {
+  body::before {
+    background-attachment: fixed;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body::before {
+    background-attachment: fixed;
+  }
+}
+
 a {
   color: #b30000;
 }

@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap';
 
 /*.container {
   height: 100%;
@@ -14,7 +14,7 @@
     font-weight: 100;
     font-size: 21px;
     color: #073642;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Nanum Pen Script', cursive;
   }
 }
 
@@ -24,15 +24,15 @@
     font-weight: 100;
     font-size: 11px;
     color: #073642;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Nanum Pen Script', cursive;
   }
 }
 
 .text {
   font-weight: 100;
-  font-size: 34px;
+  font-size: 38px;
   color: #073642;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Nanum Pen Script', cursive;
 }
 
 .dud {

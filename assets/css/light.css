@@ -2,10 +2,10 @@
 # General
 --------------------------------------------------------------*/
 
-@import 'https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap';
 
 body {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Roboto Serif', serif;
   font-size: 15px;
   background-color: #073642;
   color: #073642;
@@ -16,7 +16,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #fff top right no-repeat;
+  background: #fdf6e3 top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -53,7 +53,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Roboto Serif', serif;
 }
 
 /*--------------------------------------------------------------
@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Roboto Serif', serif;
 }
 
 #header h1 a, #header h1 a:hover {
@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
+  background: #fdf6e3;
   color: #073642;
   line-height: 1;
   margin-right: 8px;
@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #header .social-links a:hover {
   background: #b30000;
-  color: #fff;
+  color: #fdf6e3;
 }
 
 @media (max-width: 992px) {
@@ -171,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   color: #073642;
   font-size: 15px;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Roboto Serif', serif;
   font-weight: 400;
 }
 
@@ -226,13 +226,13 @@ h1, h2, h3, h4, h5, h6 {
   left: 15px;
   z-index: 9999;
   overflow-y: auto;
-  background: #fff;
+  background: #fdf6e3;
   transition: ease-in-out 0.2s;
   opacity: 0;
   visibility: hidden;
   border-radius: 10px;
   padding: 10px 0;
-  border: 2px solid #fff;
+  border: 2px solid #fdf6e3;
 }
 
 .mobile-nav * {
@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   position: fixed;
-  background: #fff;
+  background: #fdf6e3;
   overflow: hidden;
   display: none;
   transition: ease-in-out 0.2s;
@@ -288,7 +288,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   top: 0;
   right: 0;
-  background: #fff;
+  background: #fdf6e3;
 }
 
 #header.header-top .social-links, #header.header-top h2 {
@@ -340,7 +340,7 @@ section.section-show {
 }
 
 section .container {
-  background: #fff;
+  background: #fdf6e3;
   padding: 30px;
 }
 
@@ -362,7 +362,7 @@ section .container {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #b30000;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Roboto Serif', serif;
 }
 
 .section-title h2::after {
@@ -380,7 +380,7 @@ section .container {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Roboto Serif', serif;
   color: #073642;
 }
 
@@ -424,7 +424,7 @@ section .container {
   width: 100%;
   position: relative;
   text-align: center;
-  background: #fff;
+  background: #fdf6e3;
 }
 
 .counts .count-box i {
@@ -449,7 +449,7 @@ section .container {
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Roboto Serif', serif;
   font-size: 15px;
 }
 
@@ -468,7 +468,7 @@ section .container {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Roboto Serif', serif;
   color: #073642;
 }
 
@@ -478,7 +478,7 @@ section .container {
 }
 
 .skills .progress-bar-wrap {
-  background: #fff;
+  background: #fdf6e3;
 }
 
 .skills .progress-bar {
@@ -570,7 +570,7 @@ section .container {
   font-style: italic;
   margin: 0 16px 0 15px;
   padding: 20px 20px 60px 20px;
-  background: #fff;
+  background: #fdf6e3;
   position: relative;
   border-radius: 6px;
   position: relative;
@@ -588,7 +588,7 @@ section .container {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #fff !important;
+  background-color: #fdf6e3 !important;
 }
 
 .testimonials .owl-dot.active {
@@ -624,14 +624,14 @@ section .container {
   font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Roboto Serif', serif;
   color: #b30000;
   margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
   font-size: 15px;
-  background: #fff;
+  background: #fdf6e3;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
@@ -698,7 +698,7 @@ section .container {
   top: -8px;
   height: 100%;
   width: 100%;
-  background: #fff;
+  background: #fdf6e3;
   border-radius: 5px;
   transition: all .3s ease-out 0s;
   transform: translateZ(-1px);
@@ -726,7 +726,7 @@ section .container {
 }
 
 .services .icon-box:hover .icon {
-  background: #fff;
+  background: #fdf6e3;
 }
 
 .services .icon-box:hover .icon i {
@@ -766,7 +766,7 @@ section .container {
   line-height: 1;
   text-transform: uppercase;
   color: #073642;
-  background: #fff;
+  background: #fdf6e3;
   margin: 0 3px 10px 3px;
   transition: all 0.3s ease-in-out;
   border-radius: 4px;
@@ -785,12 +785,12 @@ section .container {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: #fff;
+  background: #fdf6e3;
 }
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: #fff;
+  background: #fdf6e3;
   position: absolute;
   left: 30px;
   right: 30px;
@@ -825,8 +825,8 @@ section .container {
   position: absolute;
   top: 35px;
   left: 35px;
-  border-top: 3px solid #fff;
-  border-left: 3px solid #fff;
+  border-top: 3px solid #fdf6e3;
+  border-left: 3px solid #fdf6e3;
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
@@ -839,8 +839,8 @@ section .container {
   position: absolute;
   bottom: 35px;
   right: 35px;
-  border-bottom: 3px solid #fff;
-  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fdf6e3;
+  border-right: 3px solid #fdf6e3;
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
@@ -905,7 +905,7 @@ section .container {
   color: #073642;
   padding: 20px;
   width: 100%;
-  background: #fff;
+  background: #fdf6e3;
 }
 
 .contact .info-box i.bx {
@@ -914,7 +914,7 @@ section .container {
   border-radius: 50%;
   padding: 15px;
   float: left;
-  background: #fff;
+  background: #fdf6e3;
 }
 
 .contact .info-box h3 {
@@ -952,7 +952,7 @@ section .container {
 
 .contact .php-email-form {
   padding: 30px;
-  background: #fff;
+  background: #fdf6e3;
 }
 
 .contact .php-email-form .validate {
@@ -965,7 +965,7 @@ section .container {
 
 .contact .php-email-form .error-message {
   display: none;
-  background: #fff;
+  background: #fdf6e3;
   background: #ed3c0d;
   text-align: left;
   padding: 15px;
@@ -978,7 +978,7 @@ section .container {
 
 .contact .php-email-form .sent-message {
   display: none;
-  background: #fff;
+  background: #fdf6e3;
   background: #b30000;
   text-align: center;
   padding: 15px;
@@ -987,7 +987,7 @@ section .container {
 
 .contact .php-email-form .loading {
   display: none;
-  background: #fff;
+  background: #fdf6e3;
   text-align: center;
   padding: 15px;
 }
@@ -1000,7 +1000,7 @@ section .container {
   height: 24px;
   margin: 0 10px -6px 0;
   border: 3px solid #b30000;
-  border-top-color: #fff;
+  border-top-color: #fdf6e3;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
 }
@@ -1009,38 +1009,38 @@ section .container {
   border-radius: 0;
   box-shadow: none;
   font-size: 15px;
-  background: #fff;
+  background: #fdf6e3;
   border: 0;
   transition: 0.3s;
   color: #073642;
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  background-color: #fff;
+  background-color: #fdf6e3;
 }
 
 .contact .php-email-form input::-webkit-input-placeholder, .contact .php-email-form textarea::-webkit-input-placeholder {
-  color: #fff;
+  color: #fdf6e3;
   opacity: 1;
 }
 
 .contact .php-email-form input::-moz-placeholder, .contact .php-email-form textarea::-moz-placeholder {
-  color: #fff;
+  color: #fdf6e3;
   opacity: 1;
 }
 
 .contact .php-email-form input:-ms-input-placeholder, .contact .php-email-form textarea:-ms-input-placeholder {
-  color: #fff;
+  color: #fdf6e3;
   opacity: 1;
 }
 
 .contact .php-email-form input::-ms-input-placeholder, .contact .php-email-form textarea::-ms-input-placeholder {
-  color: #fff;
+  color: #fdf6e3;
   opacity: 1;
 }
 
 .contact .php-email-form input::placeholder, .contact .php-email-form textarea::placeholder {
-  color: #fff;
+  color: #fdf6e3;
   opacity: 1;
 }
 
@@ -1088,7 +1088,7 @@ section .container {
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
-  background: #fff;
+  background: #fdf6e3;
   position: fixed;
   left: 0;
   right: 0;
@@ -1119,7 +1119,7 @@ section .container {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #fff !important;
+  background-color: #fdf6e3 !important;
 }
 
 .portfolio-details .portfolio-details-carousel .owl-dot.active {
@@ -1176,7 +1176,7 @@ section .container {
   .credits {
     text-align: center;
     padding: 10px;
-    background: #fff;
+    background: #fdf6e3;
   }
 }
 

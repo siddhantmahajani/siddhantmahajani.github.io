@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=Fira+Code&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap';
 
 #overlay{
     position:absolute;
@@ -7,7 +7,7 @@
     left:0;
     bottom:0;
     right:0;
-    background: #ffffff;
+    background: #fdf6e3;
     transition: 1s 0.4s;
   }
   #progress{
@@ -19,7 +19,7 @@
   }
   #progstat{
     font-size:0.7em;
-    font-family: 'Fira Code', monospace;
+    font-family: 'Roboto Mono', monospace;
     letter-spacing: 3px;
     position:absolute;
     top:50%;

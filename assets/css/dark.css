@@ -2,10 +2,10 @@
 # General
 --------------------------------------------------------------*/
 
-@import 'https://fonts.googleapis.com/css2?family=Lato&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap';
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'IBM Plex Serif', serif;
   font-size: 15px;
   background-color: #f7f7f7;
   color: #f7f7f7;
@@ -53,7 +53,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'IBM Plex Serif', serif;
 }
 
 /*--------------------------------------------------------------
@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  font-family: 'Lato', sans-serif;
+  font-family: 'IBM Plex Serif', serif;
 }
 
 #header h1 a, #header h1 a:hover {
@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   color: #f7f7f7;
   font-size: 15px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'IBM Plex Serif', serif;
   font-weight: 400;
 }
 
@@ -361,7 +361,7 @@ section .container {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #d86f57;
-  font-family: 'Lato', sans-serif;
+  font-family: 'IBM Plex Serif', serif;
 }
 
 .section-title h2::after {
@@ -379,7 +379,7 @@ section .container {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Lato', sans-serif;
+  font-family: 'IBM Plex Serif', serif;
   color: #f7f7f7;
 }
 
@@ -448,7 +448,7 @@ section .container {
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'IBM Plex Serif', serif;
   font-size: 15px;
 }
 
@@ -467,7 +467,7 @@ section .container {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: 'Lato', sans-serif;
+  font-family: 'IBM Plex Serif', serif;
   color: #f7f7f7;
 }
 
@@ -623,7 +623,7 @@ section .container {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: 'Lato', sans-serif;
+  font-family: 'IBM Plex Serif', serif;
   color: #d86f57;
   margin-bottom: 10px;
 }

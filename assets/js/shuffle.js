@@ -70,11 +70,11 @@ class TextScramble {
     'and walking the path'
   ]*/
   const phrases = [
-    "hi 👋🏼,",
-    "i'm siddhant mahajani",
-    "a software engineer",
-    "a data analyst",
-    "from dublin, ireland"
+    "Hi 👋🏼,",
+    "I'm Siddhant Mahajani",
+    "A Software Engineer",
+    "A Data Analyst",
+    "from Dublin, Ireland"
   ]
   
   const el = document.querySelector('.text')

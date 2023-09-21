@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Cousine&display=swap';
 
 /*.container {
   height: 100%;
@@ -14,7 +14,7 @@
     font-weight: 100;
     font-size: 21px;
     color: #f7f7f7;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Cousine', monospace;
   }
 }
 
@@ -24,7 +24,7 @@
     font-weight: 100;
     font-size: 11px;
     color: #f7f7f7;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Cousine', monospace;
   }
 }
 
@@ -32,7 +32,7 @@
   font-weight: 100;
   font-size: 34px;
   color: #f7f7f7;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Cousine', monospace;
 }
 
 .dud {

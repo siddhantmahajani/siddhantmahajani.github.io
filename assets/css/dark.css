@@ -2,10 +2,10 @@
 # General
 --------------------------------------------------------------*/
 
-@import 'https://fonts.googleapis.com/css2?family=Spectral&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap';
 
 body {
-  font-family: 'Spectral', serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 15px;
   background-color: #f7f7f7;
   color: #f7f7f7;
@@ -16,7 +16,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #44475a top right no-repeat;
+  background: #3a3a3a top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -53,7 +53,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Spectral', serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  font-family: 'Spectral', serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 #header h1 a, #header h1 a:hover {
@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #44475a;
+  background: #3a3a3a;
   color: #f7f7f7;
   line-height: 1;
   margin-right: 8px;
@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   color: #f7f7f7;
   font-size: 15px;
-  font-family: 'Spectral', serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 400;
 }
 
@@ -225,13 +225,13 @@ h1, h2, h3, h4, h5, h6 {
   left: 15px;
   z-index: 9999;
   overflow-y: auto;
-  background: #44475a;
+  background: #3a3a3a;
   transition: ease-in-out 0.2s;
   opacity: 0;
   visibility: hidden;
   border-radius: 10px;
   padding: 10px 0;
-  border: 2px solid #44475a;
+  border: 2px solid #3a3a3a;
 }
 
 .mobile-nav * {
@@ -261,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   position: fixed;
-  background: #44475a;
+  background: #3a3a3a;
   overflow: hidden;
   display: none;
   transition: ease-in-out 0.2s;
@@ -287,7 +287,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   top: 0;
   right: 0;
-  background: #44475a;
+  background: #3a3a3a;
 }
 
 #header.header-top .social-links, #header.header-top h2 {
@@ -339,7 +339,7 @@ section.section-show {
 }
 
 section .container {
-  background: #44475a;
+  background: #3a3a3a;
   padding: 30px;
 }
 
@@ -361,7 +361,7 @@ section .container {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #d86f57;
-  font-family: 'Spectral', serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .section-title h2::after {
@@ -379,7 +379,7 @@ section .container {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Spectral', serif;
+  font-family: 'DM Sans', sans-serif;
   color: #f7f7f7;
 }
 
@@ -423,7 +423,7 @@ section .container {
   width: 100%;
   position: relative;
   text-align: center;
-  background: #44475a;
+  background: #3a3a3a;
 }
 
 .counts .count-box i {
@@ -448,7 +448,7 @@ section .container {
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: 'Spectral', serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 15px;
 }
 
@@ -467,7 +467,7 @@ section .container {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: 'Spectral', serif;
+  font-family: 'DM Sans', sans-serif;
   color: #f7f7f7;
 }
 
@@ -477,7 +477,7 @@ section .container {
 }
 
 .skills .progress-bar-wrap {
-  background: #44475a;
+  background: #3a3a3a;
 }
 
 .skills .progress-bar {
@@ -569,7 +569,7 @@ section .container {
   font-style: italic;
   margin: 0 15px 0 15px;
   padding: 20px 20px 60px 20px;
-  background: #44475a;
+  background: #3a3a3a;
   position: relative;
   border-radius: 6px;
   position: relative;
@@ -587,7 +587,7 @@ section .container {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #44475a !important;
+  background-color: #3a3a3a !important;
 }
 
 .testimonials .owl-dot.active {
@@ -623,14 +623,14 @@ section .container {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: 'Spectral', serif;
+  font-family: 'DM Sans', sans-serif;
   color: #d86f57;
   margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
   font-size: 15px;
-  background: #44475a;
+  background: #3a3a3a;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
@@ -697,7 +697,7 @@ section .container {
   top: -8px;
   height: 100%;
   width: 100%;
-  background: #44475a;
+  background: #3a3a3a;
   border-radius: 5px;
   transition: all .3s ease-out 0s;
   transform: translateZ(-1px);
@@ -725,7 +725,7 @@ section .container {
 }
 
 .services .icon-box:hover .icon {
-  background: #44475a;
+  background: #3a3a3a;
 }
 
 .services .icon-box:hover .icon i {
@@ -765,7 +765,7 @@ section .container {
   line-height: 1;
   text-transform: uppercase;
   color: #f7f7f7;
-  background: #44475a;
+  background: #3a3a3a;
   margin: 0 3px 10px 3px;
   transition: all 0.3s ease-in-out;
   border-radius: 4px;
@@ -784,12 +784,12 @@ section .container {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: #44475a;
+  background: #3a3a3a;
 }
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: #44475a;
+  background: #3a3a3a;
   position: absolute;
   left: 30px;
   right: 30px;
@@ -824,8 +824,8 @@ section .container {
   position: absolute;
   top: 35px;
   left: 35px;
-  border-top: 3px solid #44475a;
-  border-left: 3px solid #44475a;
+  border-top: 3px solid #3a3a3a;
+  border-left: 3px solid #3a3a3a;
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
@@ -838,8 +838,8 @@ section .container {
   position: absolute;
   bottom: 35px;
   right: 35px;
-  border-bottom: 3px solid #44475a;
-  border-right: 3px solid #44475a;
+  border-bottom: 3px solid #3a3a3a;
+  border-right: 3px solid #3a3a3a;
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
@@ -904,7 +904,7 @@ section .container {
   color: #f7f7f7;
   padding: 20px;
   width: 100%;
-  background: #44475a;
+  background: #3a3a3a;
 }
 
 .contact .info-box i.bx {
@@ -913,7 +913,7 @@ section .container {
   border-radius: 50%;
   padding: 15px;
   float: left;
-  background: #44475a;
+  background: #3a3a3a;
 }
 
 .contact .info-box h3 {
@@ -951,7 +951,7 @@ section .container {
 
 .contact .php-email-form {
   padding: 30px;
-  background: #44475a;
+  background: #3a3a3a;
 }
 
 .contact .php-email-form .validate {
@@ -964,7 +964,7 @@ section .container {
 
 .contact .php-email-form .error-message {
   display: none;
-  background: #44475a;
+  background: #3a3a3a;
   background: #ed3c0d;
   text-align: left;
   padding: 15px;
@@ -977,7 +977,7 @@ section .container {
 
 .contact .php-email-form .sent-message {
   display: none;
-  background: #44475a;
+  background: #3a3a3a;
   background: #d86f57;
   text-align: center;
   padding: 15px;
@@ -986,7 +986,7 @@ section .container {
 
 .contact .php-email-form .loading {
   display: none;
-  background: #44475a;
+  background: #3a3a3a;
   text-align: center;
   padding: 15px;
 }
@@ -999,7 +999,7 @@ section .container {
   height: 24px;
   margin: 0 10px -6px 0;
   border: 3px solid #d86f57;
-  border-top-color: #44475a;
+  border-top-color: #3a3a3a;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
 }
@@ -1008,38 +1008,38 @@ section .container {
   border-radius: 0;
   box-shadow: none;
   font-size: 15px;
-  background: #44475a;
+  background: #3a3a3a;
   border: 0;
   transition: 0.3s;
   color: #f7f7f7;
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  background-color: #44475a;
+  background-color: #3a3a3a;
 }
 
 .contact .php-email-form input::-webkit-input-placeholder, .contact .php-email-form textarea::-webkit-input-placeholder {
-  color: #44475a;
+  color: #3a3a3a;
   opacity: 1;
 }
 
 .contact .php-email-form input::-moz-placeholder, .contact .php-email-form textarea::-moz-placeholder {
-  color: #44475a;
+  color: #3a3a3a;
   opacity: 1;
 }
 
 .contact .php-email-form input:-ms-input-placeholder, .contact .php-email-form textarea:-ms-input-placeholder {
-  color: #44475a;
+  color: #3a3a3a;
   opacity: 1;
 }
 
 .contact .php-email-form input::-ms-input-placeholder, .contact .php-email-form textarea::-ms-input-placeholder {
-  color: #44475a;
+  color: #3a3a3a;
   opacity: 1;
 }
 
 .contact .php-email-form input::placeholder, .contact .php-email-form textarea::placeholder {
-  color: #44475a;
+  color: #3a3a3a;
   opacity: 1;
 }
 
@@ -1087,7 +1087,7 @@ section .container {
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
-  background: #44475a;
+  background: #3a3a3a;
   position: fixed;
   left: 0;
   right: 0;
@@ -1118,7 +1118,7 @@ section .container {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #44475a !important;
+  background-color: #3a3a3a !important;
 }
 
 .portfolio-details .portfolio-details-carousel .owl-dot.active {
@@ -1175,7 +1175,7 @@ section .container {
   .credits {
     text-align: center;
     padding: 10px;
-    background: #44475a;
+    background: #3a3a3a;
   }
 }
 

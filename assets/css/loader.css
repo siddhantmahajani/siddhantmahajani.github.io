@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=Fira+Code&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=DM+Mono&display=swap';
 
 #overlay{
     position:absolute;
@@ -7,24 +7,24 @@
     left:0;
     bottom:0;
     right:0;
-    background: #44475a;
+    background: #fdf6e3;
     transition: 1s 0.4s;
   }
   #progress{
     height:1px;
-    background: #d86f57;
+    background: #b30000;
     position:absolute;
     width:0;
     top:50%;
   }
   #progstat{
     font-size:0.7em;
-    font-family: 'Fira Code', monospace;
+    font-family: 'DM Mono', monospace;
     letter-spacing: 3px;
     position:absolute;
     top:50%;
     margin-top:-40px;
     width:100%;
     text-align:center;
-    color: #f7f7f7;
+    color: #073642;
   }

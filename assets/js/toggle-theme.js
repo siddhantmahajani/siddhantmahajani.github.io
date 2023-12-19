@@ -1,3 +1,7 @@
+/*--------------------------------------------------------------
+# JavaScript for changing website mode
+--------------------------------------------------------------*/
+
 const toggle = document.querySelector(".toggle-theme");
 const mainTheme = document.querySelector("#main-theme");
 const shuffleTheme = document.querySelector("#shuffle-theme");

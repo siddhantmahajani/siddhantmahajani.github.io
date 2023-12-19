@@ -1,3 +1,7 @@
+/*--------------------------------------------------------------
+# JavaScript for website title
+--------------------------------------------------------------*/
+
 const header = document.querySelector(".header-title");
 const about = document.querySelector(".about-title");
 const contact = document.querySelector(".contact-title");

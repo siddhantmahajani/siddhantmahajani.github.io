@@ -1,5 +1,8 @@
-/*@import 'https://fonts.googleapis.com/css2?family=DM+Mono&display=swap';*/
-@import url('hack.css');
+/*--------------------------------------------------------------
+# CSS for Loader
+--------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 #overlay{
     position:absolute;
@@ -20,7 +23,7 @@
   }
   #progstat{
     font-size:0.7em;
-    font-family: 'Hack', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     letter-spacing: 3px;
     position:absolute;
     top:50%;

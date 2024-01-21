@@ -1164,10 +1164,10 @@ section .container {
   right: 0;
   left: 0;
   bottom: 0;
-  padding: 15px;
+  padding: 11px;
   text-align: right;
-  font-size: 15px;
-  color: #f7f7f7;
+  font-size: 11px;
+  color: #d86f57;
   z-index: 999999;
 }
 

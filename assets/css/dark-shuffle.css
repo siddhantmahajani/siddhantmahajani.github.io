@@ -17,7 +17,7 @@
   .text {
     font-weight: 100;
     font-size: 21px;
-    color: #f7f7f7;
+    color: #f8f8f2;
     font-family: 'Courier Prime', monospace;
   }
 }
@@ -27,7 +27,7 @@
   .text {
     font-weight: 100;
     font-size: 11px;
-    color: #f7f7f7;
+    color: #f8f8f2;
     font-family: 'Courier Prime', monospace;
   }
 }
@@ -35,10 +35,10 @@
 .text {
   font-weight: 100;
   font-size: 34px;
-  color: #f7f7f7;
+  color: #f8f8f2;
   font-family: 'Courier Prime', monospace;
 }
 
 .dud {
-  color: #f7f7f7;
+  color: #f8f8f2;
 }

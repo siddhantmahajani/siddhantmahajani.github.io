@@ -2,7 +2,7 @@
 # Dark shuffle theme CSS
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 /*.container {
   height: 100%;
@@ -17,8 +17,8 @@
   .text {
     font-weight: 100;
     font-size: 21px;
-    color: #f8f8f2;
-    font-family: 'Courier Prime', monospace;
+    color: #abb2bf;
+    font-family: "Roboto Mono", serif;
   }
 }
 
@@ -27,18 +27,18 @@
   .text {
     font-weight: 100;
     font-size: 11px;
-    color: #f8f8f2;
-    font-family: 'Courier Prime', monospace;
+    color: #abb2bf;
+    font-family: "Roboto Mono", serif;
   }
 }
 
 .text {
   font-weight: 100;
   font-size: 34px;
-  color: #f8f8f2;
-  font-family: 'Courier Prime', monospace;
+  color: #abb2bf;
+  font-family: "Roboto Mono", serif;
 }
 
 .dud {
-  color: #f8f8f2;
+  color: #abb2bf;
 }

@@ -17,7 +17,7 @@
   .text {
     font-weight: 100;
     font-size: 21px;
-    color: #eceff4;
+    color: #d6deeb;
     font-family: "Fira Code", serif;
   }
 }
@@ -27,7 +27,7 @@
   .text {
     font-weight: 100;
     font-size: 11px;
-    color: #eceff4;
+    color: #d6deeb;
     font-family: "Fira Code", serif;
   }
 }
@@ -35,10 +35,10 @@
 .text {
   font-weight: 100;
   font-size: 34px;
-  color: #eceff4;
+  color: #d6deeb;
   font-family: "Fira Code", serif;
 }
 
 .dud {
-  color: #eceff4;
+  color: #d6deeb;
 }

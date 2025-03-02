@@ -2,7 +2,7 @@
 # Light shuffle theme CSS
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
 /*.container {
   height: 100%;
@@ -18,7 +18,7 @@
     font-weight: 100;
     font-size: 21px;
     color: #073642;
-    font-family: "Fira Code", serif;
+    font-family: "Inconsolata", serif;
   }
 }
 
@@ -28,7 +28,7 @@
     font-weight: 100;
     font-size: 11px;
     color: #073642;
-    font-family: "Fira Code", serif;
+    font-family: "Inconsolata", serif;
   }
 }
 
@@ -36,7 +36,7 @@
   font-weight: 100;
   font-size: 34px;
   color: #073642;
-  font-family: "Fira Code", serif;
+  font-family: "Inconsolata", serif;
 }
 
 .dud {

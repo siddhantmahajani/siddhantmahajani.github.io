@@ -17,7 +17,7 @@
   .text {
     font-weight: 100;
     font-size: 21px;
-    color: #d6deeb;
+    color: #eee8d5;
     font-family: "Inconsolata", serif;
   }
 }
@@ -27,7 +27,7 @@
   .text {
     font-weight: 100;
     font-size: 11px;
-    color: #d6deeb;
+    color: #eee8d5;
     font-family: "Inconsolata", serif;
   }
 }
@@ -35,10 +35,10 @@
 .text {
   font-weight: 100;
   font-size: 34px;
-  color: #d6deeb;
+  color: #eee8d5;
   font-family: "Inconsolata", serif;
 }
 
 .dud {
-  color: #d6deeb;
+  color: #eee8d5;
 }

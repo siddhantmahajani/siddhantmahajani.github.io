@@ -2,10 +2,10 @@
 # Dark theme CSS
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:opsz@17..18&display=swap');
 
 body {
-  font-family: "Mukta", serif;
+  font-family: "Google Sans", sans-serif;
   font-size: 16px;
   background-color: #f8f8f2;
   color: #f8f8f2;
@@ -53,7 +53,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Mukta", serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  font-family: "Mukta", serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 #header h1 a, #header h1 a:hover {
@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   color: #f8f8f2;
   font-size: 15px;
-  font-family: "Mukta", serif;
+  font-family: "Google Sans", sans-serif;
   font-weight: 400;
 }
 
@@ -361,7 +361,7 @@ section .container {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #ff79c6;
-  font-family: "Mukta", serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 .section-title h2::after {
@@ -379,7 +379,7 @@ section .container {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: "Mukta", serif;
+  font-family: "Google Sans", sans-serif;
   color: #f8f8f2;
 }
 
@@ -448,7 +448,7 @@ section .container {
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "Mukta", serif;
+  font-family: "Google Sans", sans-serif;
   font-size: 15px;
 }
 
@@ -467,7 +467,7 @@ section .container {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: "Mukta", serif;
+  font-family: "Google Sans", sans-serif;
   color: #f8f8f2;
 }
 
@@ -623,7 +623,7 @@ section .container {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Mukta", serif;
+  font-family: "Google Sans", sans-serif;
   color: #ff79c6;
   margin-bottom: 10px;
 }
@@ -1166,7 +1166,7 @@ section .container {
   bottom: 0;
   padding: 7px;
   text-align: right;
-  font-size: 7px;
+  font-size: 10px;
   color: #ff79c6;
   z-index: 999999;
 }

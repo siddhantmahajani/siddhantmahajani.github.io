@@ -2,7 +2,7 @@
 # CSS for Loader
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
 #overlay{
     position:absolute;
@@ -11,24 +11,24 @@
     left:0;
     bottom:0;
     right:0;
-    background: #fdf6e3;
+    background: #f8f8f2;
     transition: 1s 0.4s;
   }
   #progress{
     height:1px;
-    background: #b30000;
+    background: #6272a4;
     position:absolute;
     width:0;
     top:50%;
   }
   #progstat{
     font-size:0.7em;
-    font-family: "Inconsolata", serif;
+    font-family: "JetBrains Mono", monospace;
     letter-spacing: 3px;
     position:absolute;
     top:50%;
     margin-top:-40px;
     width:100%;
     text-align:center;
-    color: #073642;
+    color: #282a36;
   }

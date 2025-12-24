@@ -2,7 +2,7 @@
 # Dark shuffle theme CSS
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
 /*.container {
   height: 100%;
@@ -18,7 +18,7 @@
     font-weight: 100;
     font-size: 21px;
     color: #f8f8f2;
-    font-family: "Inconsolata", serif;
+    font-family: "JetBrains Mono", monospace;
   }
 }
 
@@ -28,7 +28,7 @@
     font-weight: 100;
     font-size: 11px;
     color: #f8f8f2;
-    font-family: "Inconsolata", serif;
+    font-family: "JetBrains Mono", monospace;
   }
 }
 
@@ -36,7 +36,7 @@
   font-weight: 100;
   font-size: 34px;
   color: #f8f8f2;
-  font-family: "Inconsolata", serif;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .dud {

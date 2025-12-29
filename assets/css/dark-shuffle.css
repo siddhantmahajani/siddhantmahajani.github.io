@@ -17,7 +17,7 @@
   .text {
     font-weight: 100;
     font-size: 21px;
-    color: #f8f8f2;
+    color: #FFFFFF;
     font-family: "JetBrains Mono", monospace;
   }
 }
@@ -27,7 +27,7 @@
   .text {
     font-weight: 100;
     font-size: 11px;
-    color: #f8f8f2;
+    color: #FFFFFF;
     font-family: "JetBrains Mono", monospace;
   }
 }
@@ -35,10 +35,10 @@
 .text {
   font-weight: 100;
   font-size: 34px;
-  color: #f8f8f2;
+  color: #FFFFFF;
   font-family: "JetBrains Mono", monospace;
 }
 
 .dud {
-  color: #f8f8f2;
+  color: #FFFFFF;
 }

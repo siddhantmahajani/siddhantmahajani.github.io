@@ -1,0 +1,1079 @@
+/*--------------------------------------------------------------
+# Redesign 2027 — continuous scroll + interactive features
+# Theme-agnostic: uses tokens from dark.css / light.css
+# Load AFTER the theme <link> tags in index.html
+--------------------------------------------------------------*/
+
+/* Prevent horizontal scroll without breaking position:sticky.
+   overflow-x:clip clips paint without creating a scroll container. */
+body { overflow-x: clip; }
+
+/* ── 1. Continuous scroll: override SPA section positioning ── */
+section,
+section.section-show {
+  position: relative !important;
+  width: 100% !important;
+  top: 0 !important;
+  bottom: auto !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  padding-bottom: 0 !important;
+}
+
+section {
+  padding-top: 24px;
+}
+
+/* Flow spacer inserted by redesign.js — must not accumulate space */
+#header-flow-spacer,
+#header-scroll-sentinel {
+  display: block !important;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+/* ── 2. Ambient header gradient (full-height hero only) ── */
+#header:not(.header-top) {
+  overflow: hidden;
+}
+
+#header:not(.header-top)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 55% at 15% 50%, rgba(var(--accent-rgb),0.12), transparent 65%),
+    radial-gradient(ellipse 50% 70% at 85% 25%, rgba(var(--accent-rgb),0.06), transparent 60%);
+  animation: ambientDrift 14s ease-in-out infinite alternate;
+}
+
+/* Light theme ambient colours */
+@media (prefers-color-scheme: light) {
+  #header:not(.header-top)::after {
+    background:
+      radial-gradient(ellipse 80% 55% at 15% 50%, rgba(var(--accent-rgb),0.08), transparent 65%),
+      radial-gradient(ellipse 50% 70% at 85% 25%, rgba(var(--accent-rgb),0.04), transparent 60%);
+  }
+}
+:root[data-theme="light"] #header:not(.header-top)::after {
+  background:
+    radial-gradient(ellipse 80% 55% at 15% 50%, rgba(var(--accent-rgb),0.08), transparent 65%),
+    radial-gradient(ellipse 50% 70% at 85% 25%, rgba(var(--accent-rgb),0.04), transparent 60%);
+}
+
+@keyframes ambientDrift {
+  0%   { transform: scale(1)    translate(0,    0); }
+  100% { transform: scale(1.08) translate(-4%, 3%); }
+}
+
+#header .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── 3. Availability badge ── */
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 18px;
+  padding: 4px 12px 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-family: "Iosevka", monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  cursor: default;
+  width: fit-content;
+  transition: border-color 0.2s ease;
+}
+
+.availability-badge[data-available="true"] {
+  border-color: #3fb950;
+  color: #3fb950;
+}
+
+.availability-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.availability-badge[data-available="true"] .availability-dot {
+  animation: pulseDot 2.5s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(63,185,80,0.5); }
+  50%       { box-shadow: 0 0 0 5px rgba(63,185,80,0); }
+}
+
+/* ── 4. Download CV button ── */
+#header .social-links a.download-cv {
+  width: auto;
+  padding: 0 12px;
+  gap: 6px;
+  font-family: "Iosevka", monospace;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+#header .social-links a.download-cv:hover {
+  opacity: 0.85;
+  color: var(--bg);
+  background: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* ── 5. Copy-email toast ── */
+#copy-toast {
+  position: fixed;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: "Iosevka", monospace;
+  font-size: 12px;
+  padding: 7px 18px;
+  border-radius: 999px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 99998;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+#copy-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ── 6. Stat counter tiles ── */
+.stat-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 32px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 900px) { .stat-tiles { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .stat-tiles { gap: 8px; } }
+
+.stat-tile {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 14px 16px;
+  text-align: center;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stat-tile:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 6px 20px rgba(var(--accent-rgb),0.12);
+}
+
+.stat-num {
+  display: block;
+  font-family: "Iosevka", monospace;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 7px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* ── 7. "Now" section ── */
+.now-content {
+  max-width: 640px;
+}
+
+.now-content p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.now-content p:last-of-type { margin-bottom: 0; }
+.now-content strong { color: var(--text); font-weight: 600; }
+.now-content em { font-style: italic; }
+
+.now-meta {
+  display: block;
+  margin-top: 20px;
+  font-family: "Iosevka", monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+}
+
+/* ── 8. Interactive skill tags ── */
+.skill-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.skill-filter-btn {
+  font-family: "Iosevka", monospace;
+  font-size: 10px;
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+}
+
+.skill-filter-btn:hover,
+.skill-filter-btn.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(var(--accent-rgb),0.08);
+}
+
+.skill-tags-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.skill-tag {
+  font-family: "Iosevka", monospace;
+  font-size: 12px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-alt);
+  color: var(--text-muted);
+  transition: all 0.15s ease;
+  cursor: default;
+  display: inline-block;
+}
+
+.skill-tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(var(--accent-rgb),0.08);
+  transform: translateY(-1px);
+}
+
+.skill-tag[hidden] { display: none !important; }
+
+/* ── 9. Project cards ── */
+.project-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 600px) { .project-cards-grid { grid-template-columns: 1fr; } }
+
+.project-card {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 32px rgba(var(--accent-rgb),0.15);
+}
+
+.project-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.project-card h4 {
+  font-family: "Iosevka", monospace;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.project-year {
+  font-family: "Iosevka", monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 2px 7px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.project-metric {
+  font-family: "Iosevka", monospace;
+  font-size: 11px;
+  color: var(--accent);
+  background: rgba(var(--accent-rgb),0.08);
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  padding: 2px 8px;
+  width: fit-content;
+}
+
+.project-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.stack-chip {
+  font-family: "Iosevka", monospace;
+  font-size: 11px;
+  padding: 2px 7px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--text-muted);
+}
+
+.project-links {
+  display: flex;
+  gap: 14px;
+  margin-top: 2px;
+}
+
+.project-links a {
+  font-family: "Iosevka", monospace;
+  font-size: 11px;
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: opacity 0.15s;
+}
+
+.project-links a:hover { opacity: 0.65; color: var(--accent); }
+.project-links a i { font-size: 12px; }
+
+/* ── 10. Visual timeline ── */
+.timeline {
+  position: relative;
+  padding-left: 28px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  bottom: 4px;
+  width: 1px;
+  background: var(--border);
+}
+
+.tl-item {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.tl-item:last-child { padding-bottom: 0; }
+
+.tl-dot {
+  position: absolute;
+  left: -25px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: var(--surface);
+  border: 2px solid var(--accent);
+  z-index: 1;
+  transition: background 0.2s ease;
+}
+
+.tl-item:first-child .tl-dot { background: var(--accent); }
+.tl-item:hover .tl-dot { background: var(--accent); }
+
+.tl-title {
+  font-family: "Iosevka", monospace;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 2px;
+  line-height: 1.3;
+}
+
+.tl-date {
+  display: block;
+  font-family: "Iosevka", monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+
+.tl-org {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0 0 8px;
+}
+
+.tl-item ul {
+  padding-left: 16px;
+  margin: 6px 0 0;
+}
+
+.tl-item ul li {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  padding-bottom: 5px;
+}
+
+/* ── 11. Scroll-reveal ── */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal.reveal-ready {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .reveal.reveal-ready.revealed {
+    opacity: 1;
+    transform: none;
+  }
+
+  .reveal-d1 { transition-delay: 0.08s !important; }
+  .reveal-d2 { transition-delay: 0.16s !important; }
+  .reveal-d3 { transition-delay: 0.24s !important; }
+  .reveal-d4 { transition-delay: 0.32s !important; }
+}
+
+/* ── 12. Section progress dots ── */
+#section-dots {
+  position: fixed;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 990;
+}
+
+@media (max-width: 768px) { #section-dots { display: none; } }
+
+.section-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.section-dot:hover {
+  background: var(--text-muted);
+  transform: scale(1.4);
+}
+
+.section-dot.active {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+
+.section-dot::after {
+  content: attr(data-label);
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Iosevka", monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.section-dot:hover::after { opacity: 1; }
+
+/* ── 13. Command palette ── */
+#cmd-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 99995;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 14vh;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+#cmd-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#cmd-box {
+  width: min(520px, 90vw);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+#cmd-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+#cmd-input-row i {
+  color: var(--text-muted);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+#cmd-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: "Iosevka", monospace;
+  font-size: 14px;
+  color: var(--text);
+  caret-color: var(--accent);
+  min-width: 0;
+}
+
+#cmd-input::placeholder { color: var(--text-muted); }
+
+#cmd-esc-hint {
+  font-family: "Iosevka", monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  padding: 2px 6px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+#cmd-list {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.cmd-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.1s ease;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.cmd-item:hover,
+.cmd-item.cmd-focused {
+  background: var(--surface-alt);
+}
+
+.cmd-item.cmd-focused { color: var(--accent); }
+
+.cmd-item i {
+  color: var(--text-muted);
+  font-size: 14px;
+  flex-shrink: 0;
+  width: 16px;
+  text-align: center;
+}
+
+.cmd-item.cmd-focused i { color: var(--accent); }
+
+.cmd-item .cmd-arrow {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+#cmd-empty {
+  padding: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: "Iosevka", monospace;
+}
+
+/* Nav command palette trigger */
+.cmd-trigger i { font-size: 15px; line-height: 1; }
+
+/* ── 14. Hover micro-interactions ── */
+/* Section containers: subtle glow on hover */
+section .container {
+  transition: box-shadow 0.2s ease;
+}
+
+section .container:hover {
+  box-shadow: -3px 0 0 0 var(--accent), var(--shadow-md);
+}
+
+/* Resume/timeline items: glow on hover */
+.tl-item {
+  transition: opacity 0.2s ease;
+}
+
+.timeline:hover .tl-item:not(:hover) {
+  opacity: 0.65;
+}
+
+/* Project card already has hover above */
+
+/* Social links: per-icon accent colours on hover */
+#header .social-links a.github:hover  { background: #333; border-color: #333; }
+#header .social-links a.linkedin:hover { background: #0a66c2; border-color: #0a66c2; }
+#header .social-links a.twitter:hover  { background: #000; border-color: #000; }
+#header .social-links a.email:hover    { background: var(--accent); border-color: var(--accent); }
+
+/* Keep text color correct on branded hover */
+#header .social-links a.github:hover i,
+#header .social-links a.linkedin:hover i,
+#header .social-links a.twitter:hover i { color: #ffffff; }
+#header .social-links a.email:hover i  { color: var(--bg); }
+
+/* ── 15. Misc layout fixes ── */
+/* Give sections bottom spacing */
+section + section {
+  padding-top: 0;
+}
+
+/* Remove old .about-me top margin now that page is continuous scroll */
+#about .about-me { padding-top: 0; }
+
+/* Make Things I do items a 2x2 grid on wider screens */
+@media (min-width: 992px) {
+  .things-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 32px;
+  }
+}
+
+/* Projects section spacing */
+/* Extra bottom space ensures the browser can scroll #projects past the
+   120px nav threshold — without it, the page ends before reaching that point.
+   On mobile the nav links are hidden so a smaller value is enough. */
+#projects.resume {
+  padding-top: 24px;
+  padding-bottom: calc(100vh - 200px);
+}
+@media (max-width: 991px) {
+  #projects.resume { padding-bottom: 80px; }
+}
+
+/* Ensure nav cmd-trigger doesn't stretch */
+.nav-menu li a.cmd-trigger {
+  padding: 5px 8px;
+}
+
+/* ── 16. Sticky site navigation (#site-nav) ── */
+
+/* Neutralise header-top / header-tops — the old SPA sticky mechanism.
+   With #site-nav handling stickiness the hero must never change size. */
+#header,
+#header.header-top,
+#header.header-tops {
+  position: relative !important;
+  height: 100vh !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+#site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 998;
+  height: 60px;
+  width: 100%;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#site-nav.scrolled {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom-color: var(--border);
+  box-shadow: 0 1px 12px rgba(0,0,0,0.1);
+}
+
+.site-nav-inner {
+  width: 100%;
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-logo {
+  font-family: "Iosevka", monospace;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color 0.15s ease;
+}
+
+.nav-logo:hover { color: var(--accent); text-decoration: none; }
+.nav-prompt { color: var(--accent); }
+
+.site-nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+}
+
+.site-nav-links li a {
+  font-family: "Iosevka", monospace;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 5px 11px;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s ease, background 0.15s ease;
+  display: block;
+}
+
+.site-nav-links li a:hover {
+  color: var(--text);
+  background: rgba(var(--accent-rgb),0.08);
+  text-decoration: none;
+}
+
+.site-nav-links li.active > a {
+  color: var(--accent);
+  background: rgba(var(--accent-rgb),0.1);
+}
+
+.site-nav-links li.active > a::before { content: "> "; }
+
+.site-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.site-nav-actions .cmd-trigger {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 13px;
+  padding: 4px 9px;
+  cursor: pointer;
+  font-family: "Iosevka", monospace;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  line-height: 1;
+}
+
+.site-nav-actions .cmd-trigger::after {
+  content: "⌘K";
+  font-size: 10px;
+  letter-spacing: 0.3px;
+}
+
+.site-nav-actions .cmd-trigger:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.site-nav-actions .toggle-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.site-nav-actions .toggle-theme:hover {
+  color: var(--text);
+  background: rgba(var(--accent-rgb),0.08);
+}
+
+.site-nav-actions .toggle-theme i { font-size: 16px; }
+
+@media (max-width: 991px) {
+  .site-nav-links { display: none !important; }
+  .site-nav-inner { padding: 0 16px; }
+  /* Hide ⌘K on mobile (keyboard shortcut not applicable) and make room
+     for main.js hamburger toggle at position:fixed right:16px */
+  .site-nav-actions .cmd-trigger { display: none !important; }
+  .site-nav-actions { margin-right: 44px; }
+}
+
+/* ── 17. Skill tag category colours (Solarized semantic palette) ── */
+.skill-tag[data-cat="lang"]     { border-color: rgba(181,137,0,0.35);    color: #b58900; background: rgba(181,137,0,0.07); }
+.skill-tag[data-cat="backend"]  { border-color: rgba(var(--accent-rgb),0.35);   color: var(--accent); background: rgba(var(--accent-rgb),0.07); }
+.skill-tag[data-cat="data"]     { border-color: rgba(42,161,152,0.35);   color: #2aa198; background: rgba(42,161,152,0.07); }
+.skill-tag[data-cat="ml"]       { border-color: rgba(211,54,130,0.35);   color: #d33682; background: rgba(211,54,130,0.07); }
+.skill-tag[data-cat="db"]       { border-color: rgba(203,75,22,0.35);    color: #cb4b16; background: rgba(203,75,22,0.07); }
+.skill-tag[data-cat="devops"]   { border-color: rgba(133,153,0,0.35);    color: #859900; background: rgba(133,153,0,0.07); }
+.skill-tag[data-cat="cloud"]    { border-color: rgba(108,113,196,0.35);  color: #6c71c4; background: rgba(108,113,196,0.07); }
+
+.skill-tag[data-cat]:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   18. ANIME THEME — Flame × Water aesthetic
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Hero canvas (floating ember particles) ── */
+#hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Water ripple on hero click ── */
+.hero-ripple {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid rgba(var(--accent-rgb), 0.7);
+  animation: heroRipple 1.1s cubic-bezier(0.2,0.6,0.4,1) forwards;
+}
+
+.hero-ripple::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
+  animation: heroRipple 1.1s 0.12s cubic-bezier(0.2,0.6,0.4,1) forwards;
+}
+
+@keyframes heroRipple {
+  to { transform: translate(-50%, -50%) scale(30); opacity: 0; }
+}
+@media (max-width: 620px) {
+  @keyframes heroRipple {
+    to { transform: translate(-50%, -50%) scale(18); opacity: 0; }
+  }
+}
+
+/* ── Cursor trail particles ── */
+.cursor-trail {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9990;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--accent);
+  animation: trailFade 0.65s ease-out forwards;
+}
+
+@keyframes trailFade {
+  0%   { opacity: 0.55; transform: translate(-50%, -50%) scale(1.4); }
+  100% { opacity: 0;    transform: translate(-50%, -50%) scale(0) translateY(-8px); }
+}
+
+/* kanji decorations removed */
+
+/* ── 3-D card tilt ── */
+.project-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Enhanced card hover glow with flame-water dual colour */
+.project-card:hover {
+  box-shadow:
+    0 8px 28px rgba(var(--accent-rgb),0.18),
+    0 0 0 1px rgba(var(--accent-rgb),0.25),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+/* ── Slash-in reveal for section containers ── */
+.reveal-container {
+  opacity: 0;
+  transform: translateX(-16px);
+  transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal-container.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Breath pulse on nav active item ── */
+#site-nav .site-nav-links li.active a {
+  animation: breathePulse 3s 0.3s ease-in-out infinite;
+}
+
+@keyframes breathePulse {
+  0%, 100% { text-shadow: none; }
+  50%       { text-shadow: 0 0 10px rgba(var(--accent-rgb),0.5); }
+}
+
+/* ── Glow sweep on section border when revealed ── */
+section .container {
+  position: relative;
+}
+
+section.section-glow .container::before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: 0;
+  width: 3px;
+  height: 0;
+  background: linear-gradient(to bottom, #ff4500, var(--accent), #00cfff);
+  animation: borderSweep 0.7s cubic-bezier(0.22,1,0.36,1) forwards;
+  border-radius: 2px;
+  z-index: 10;
+}
+
+@keyframes borderSweep {
+  0%   { height: 0;    opacity: 1; }
+  80%  { height: 100%; opacity: 1; }
+  100% { height: 100%; opacity: 0; }
+}
+
+/* ── Skill tag hover glow ── */
+.skill-tag {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.skill-tag:hover {
+  box-shadow: 0 0 8px rgba(var(--accent-rgb),0.25);
+}
+
+/* ── Timeline entry slide-in ── */
+.tl-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.22,1,0.36,1);
+}
+.tl-item.tl-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Stat tile glow on count ── */
+.stat-tile.counted {
+  box-shadow: 0 0 20px rgba(var(--accent-rgb),0.18);
+  transition: box-shadow 0.4s ease;
+}
+
+/* ── Hero heading ambient glow ── */
+#header .profile-title {
+  text-shadow: 0 0 40px rgba(var(--accent-rgb),0.15);
+}
+
+/* ── Section title entrance ── */
+.section-title h2 {
+  transition: text-shadow 0.3s ease;
+}
+.section-title.revealed h2,
+.reveal.revealed .section-title h2 {
+  text-shadow: 0 0 24px rgba(var(--accent-rgb),0.12);
+}
+
+/* floating kanji removed */

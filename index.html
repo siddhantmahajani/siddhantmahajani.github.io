@@ -16,7 +16,10 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <!-- DM Sans via Google Fonts (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <!-- Iosevka via Fontsource (monospace) -->
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/iosevka/index.css" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,51 +36,70 @@
   <!-- Shuffle text CSS -->
   <link href="assets/css/light-shuffle.css" rel="stylesheet" id="shuffle-theme">
   <!-- Loader CSS File -->
-  <!-- <link href="assets/css/light-loader.css" rel="stylesheet" id="loader-theme"> -->
+  <link href="assets/css/light-loader.css" rel="stylesheet" id="loader-theme">
+
+  <!-- Redesign styles (theme-agnostic, uses tokens) -->
+  <link href="assets/css/redesign.css" rel="stylesheet">
 
   <!-- Social network icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/v4-shims.css">
 </head>
 
 <body>
   <!-- ===== Loader ====== -->
   <div id="overlay">
-    <div id="progstat"></div>
-    <div id="progress"></div>
+    <canvas id="ds-canvas"></canvas>
+    <div id="ds-progress"></div>
   </div>
+
+  <!-- ======= Sticky Site Navigation ======= -->
+  <nav id="site-nav" aria-label="Site navigation">
+    <div class="site-nav-inner">
+      <a href="#header" class="nav-logo"><span class="nav-prompt">~/</span>siddhant</a>
+      <ul class="site-nav-links d-none d-lg-flex">
+        <li class="active"><a href="#header">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#now">now</a></li>
+        <li><a href="#resume">resume</a></li>
+        <li><a href="#projects">projects</a></li>
+      </ul>
+      <div class="site-nav-actions">
+        <button class="cmd-trigger" title="Command palette (⌘K)" aria-label="Open command palette"><i class="ri-terminal-line"></i></button>
+        <a href="javascript:void(0)" class="toggle-theme" aria-label="Toggle colour theme"><i id="toggle-icon" class="ri-moon-line"></i></a>
+      </div>
+    </div>
+  </nav>
+
   <div id="container">
     <!-- ======= Header ======= -->
     <header id="header" class="header-tops">
       <div class="container">
 
-        <!--<h1>
-          <span id="typed-strings">
-            <span>Siddhant Mahajani</span>
-          </span>
-          <span id="typed"></span>
-        </h1>
-        <h2>I'm a <span>Software Engineer</span> from Pune, India</h2>-->
         <div class="container">
           <div class="text"></div>
+          <div class="availability-badge" data-available="false">
+            <span class="availability-dot"></span>
+            <span>Not open to opportunities</span>
+          </div>
         </div>
 
         <nav class="nav-menu d-none d-lg-block">
           <ul>
             <li class="active"><a class="header-title" href="#header">Home</a></li>
             <li><a class="about-title" href="#about">About</a></li>
+            <li><a class="now-title" href="#now">Now</a></li>
             <li><a class="resume-title" href="#resume">Resume</a></li>
-            <!--<li><a class="contact-title" href="#contact">Contact</a></li>-->
-            <li><a href="javascript:void(0)" class="toggle-theme"><i id="toggle-icon" class="icofont-moon"></i></a></li>
+            <li><a class="projects-title" href="#projects">Projects</a></li>
+            <li><a href="javascript:void(0)" class="cmd-trigger" title="Command Palette (⌘K)"><i class="ri-terminal-line"></i></a></li>
           </ul>
         </nav>
 
         <div class="social-links">
-          <a href="mailto:siddhantjm@pm.me" class="email" title="Mail"><i class="icofont-envelope"></i></a>
-          <a href="https://tinyurl.com/42feccjf" class="github" title="Github" target="_blank"><i class="fa fa-github"></i></a>
-          <a href="https://tinyurl.com/4s523ddc" class="linkedin" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://tinyurl.com/yc8kx287" class="blusky" title="Blusky" target="_blank"><i class="fa-brands fa-bluesky"></i></a>
+          <a href="#" class="email copy-email" title="Copy email (siddhantjm@pm.me)"><i class="ri-mail-line"></i></a>
+          <a href="https://tinyurl.com/42feccjf" class="github" title="Github" target="_blank"><i class="ri-github-line"></i></a>
+          <a href="https://tinyurl.com/4s523ddc" class="linkedin" title="LinkedIn" target="_blank"><i class="ri-linkedin-line"></i></a>
+          <a href="https://tinyurl.com/5ff2u4f6" class="twitter" title="Twitter" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="assets/resume.pdf" class="download-cv" title="Download CV" download><i class="ri-download-2-line"></i> CV</a>
         </div>
 
       </div>
@@ -99,22 +121,42 @@
             <img src="assets/img/me.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Software Engineer/Data Analyst</h3>
+            <h3>Backend &amp; Data Engineer</h3>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>City:</strong><a href="https://goo.gl/maps/eoJ3p3AdhwDMbctg6" target="_blank"> Dublin, Ireland</a></li>
+                  <li><i class="ri-arrow-right-s-line"></i> <strong>City:</strong><a href="https://goo.gl/maps/eoJ3p3AdhwDMbctg6" target="_blank"> Dublin, Ireland</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Mail:</strong><a href="mailto:siddhantjm@pm.me"> siddhantjm [at] pm [dot] me</a></li>
+                  <li><i class="ri-arrow-right-s-line"></i> <strong>Mail:</strong><a href="mailto:siddhantjm@pm.me"> siddhantjm [at] pm [dot] me</a></li>
                 </ul>
               </div>
             </div>
             <p>
-            Detail-oriented data analyst and a software engineer passionate about helping business grow and solve real-world problems. As a former software engineer with 4+ years of experience, I am good at writing clean, efficient, readable, and reusable code and also analysing, debugging, and troubleshooting functional and technical issues. I have also completed Google Data Analytics Professional certification.
+            Backend engineer and data specialist with 8+ years of experience designing scalable systems, high-throughput data pipelines, and intelligent applications. Proficient in Java, Python, and Spring Boot, with hands-on expertise in Elasticsearch, ETL architecture, and machine learning. MSc in Computing (Data Analytics) from Dublin City University. Passionate about clean architecture, measurable performance improvements, and bridging the gap between engineering and data science.
             </p>
+          </div>
+        </div>
+
+        <!-- Stat counter tiles -->
+        <div class="stat-tiles">
+          <div class="stat-tile reveal" data-count="8" data-suffix="+">
+            <span class="stat-num">8+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-tile reveal reveal-d1" data-count="100" data-suffix="K+">
+            <span class="stat-num">100K+</span>
+            <span class="stat-label">Records Per Batch</span>
+          </div>
+          <div class="stat-tile reveal reveal-d2" data-count="70" data-suffix="%">
+            <span class="stat-num">70%</span>
+            <span class="stat-label">Performance Gain</span>
+          </div>
+          <div class="stat-tile reveal reveal-d3" data-count="94" data-suffix="%">
+            <span class="stat-num">94%</span>
+            <span class="stat-label">ML Accuracy</span>
           </div>
         </div>
 
@@ -142,53 +184,46 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <h3 class="resume-title">What am I doing right now?</h3>
+            <h3 class="resume-title">Backend Engineering</h3>
             <div class="resume-item">
               <p>
                 <ul>
-                  <li>Working as a Software Developer to build functionalities from scratch, redesign existing structure, optimise code and functionalities for better performance, and fix issues in the existing functionalities</li>
-                  <li>Working on POC's for innovative features and functionalities</li>
-                  <li>Learning about data analytics, data science, machine learning, and artificial intelligence</li>
-                  <li>Trying to implement what I gain from the course in real-world that might solve actual problems and make this world a better place</li>
+                  <li>Build scalable REST APIs, batch processing pipelines, and microservices using Java, Spring Boot, and Spring Batch</li>
+                  <li>Design and optimise JPA/Hibernate queries and application performance — consistently achieving 40–70% throughput improvements</li>
+                  <li>Containerise application services using Docker for consistent, repeatable deployments</li>
                 </ul>
               </p>
             </div>
-            <h3 class="resume-title">What have I done?</h3>
+            <h3 class="resume-title">Data Engineering &amp; Search</h3>
             <div class="resume-item">
               <p>
                 <ul>
-                  <li>Built functionalities from scratch.</li>
-                  <li>Enhance performance of the existing functionalities.</li>
-                  <li>Improve and build upon existing systems.</li>
-                  <li>Collaborated with clients in requirement gathering activities.</li>
-                  <li>"continuous maintenance"</li>
+                  <li>Architect ETL pipelines integrating ERP and non-ERP data sources (SAP, Oracle EBS, QlikView, Workday)</li>
+                  <li>Build Elasticsearch-backed analytics and full-text search solutions for real-time operational insights</li>
+                  <li>Work with Hadoop, Hive, PostgreSQL, MongoDB, and DynamoDB across structured and unstructured data</li>
                 </ul>
               </p>
             </div>
           </div>
           <div class="col-lg-6">
-            <h3 class="resume-title">I am a (good)</h3>
+            <h3 class="resume-title">Machine Learning &amp; Research</h3>
             <div class="resume-item">
               <p>
                 <ul>
-                  <li>Analyser and Problem solver</li>
-                  <li>Multi-tasker</li>
-                  <li>Quick and perpetual learner</li>
-                  <li>Debugger and Troubleshooter</li>
-                  <li>Team Player</li>
-                  <li>Result and Quality oriented individual</li>
-                  <li>Initiative and Independent</li>
-                  <li>Flexible, Patient, and Adaptive individual</li>
+                  <li>Develop NLP pipelines for sentiment analysis and text classification using Python and Scikit-Learn</li>
+                  <li>Build computer vision models and image classifiers with TensorFlow and OpenCV</li>
+                  <li>Published research on lexicon vs. ML-based sentiment analysis at AICS 2023</li>
                 </ul>
               </p>
             </div>
-            <h3 class="resume-title">I would like to</h3>
+            <h3 class="resume-title">Cloud &amp; DevOps</h3>
             <div class="resume-item">
               <p>
                 <ul>
-                  <li>Work with large amount of data to identify patterns, problems, and try to fix them to help businesses grow.</li>
-                  <li>Build softwares and functionalities that would solve real-world problem that would actually bring change, add value with great work, and make this world a better and safe place for us.</li>
-                  <li>Work with great people and learn from them.</li>
+                  <li>Deploy and manage workloads on AWS (Lambda, DynamoDB, S3) and Google Cloud Platform</li>
+                  <li>Automate CI/CD workflows with Jenkins and manage builds with Maven and Gradle</li>
+                  <li>Implement encryption solutions (OpenSSL, PGP) and data security best practices</li>
+                </ul>
               </p>
             </div>
           </div>
@@ -199,125 +234,67 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Technology Stack:</h2>
+          <h2>Technology Stack</h2>
         </div>
 
-        <div class="row">
-          <div class="col-lg-6">
-            <h3 class="resume-title">I expertise in</h3>
-            <div class="resume-item">
-              <p>
-                <ul>
-                  <li>Object Oriented Programming</li>
-                  <li>Data Analytics</li>
-                </ul>
-              </p>
-            </div>
-            <h3 class="resume-title">Languages:</h3>
-            <div class="resume-item">
-              <p>
-                <ul>
-                  <li>Java</li>
-                  <li>JavaScript</li>
-                  <li>Python</li>
-                  <li>R</li>
-                </ul>
-              </p>
-            </div>
-            <h3 class="resume-title">Databases:</h3>
-            <div class="resume-item">
-              <p>
-                <ul>
-                  <li>SQL</li>
-                  <li>PostgreSQL</li>
-                  <li>Oracle</li>
-                  <li>Mongo Database</li>
-                  <li>Apache Hadoop and Hive</li>
-                  <li>AWS DynamoDB</li>
-                  <li>Redis</li>
-                </ul>
-              </p>
-            </div>
-            <h3 class="resume-title">Visualization Tools:</h3>
-            <div class="resume-item">
-              <p>
-                <ul>
-                  <li>Tableau</li>
-                  <li>Excel</li>
-                </ul>
-              </p>
-            </div>
-            <h3 class="resume-title">Libraries:</h3>
-            <div class="resume-item">
-              <p>
-                <ul>
-                  <li>Quartz</li>
-                  <li>Pandas</li>
-                  <li>NumPy</li>
-                  <li>TensorFlow</li>
-                  <li>Scikit-Learn</li>
-                  <li>Scipy</li>
-                  <li>Matplotlib</li>
-                  <li>Seaborn</li>
-                  <li>OpenCV</li>
-                </ul>
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <h3 class="resume-title">Frameworks:</h3>
-            <div class="resume-item">
-              <p>
-                <ul>
-                  <li>Spring Framework</li>
-                  <li>JPA/Hibernate</li>
-                  <li>Flask</li>
-                </ul>
-              </p>
-            </div>
-            <h3 class="resume-title">Version Control:</h3>
-            <div class="resume-item">
-              <p>
-                <ul>
-                  <li>SVN</li>
-                  <li>Git</li>
-                </ul>
-              </p>
-            </div>
-            <h3 class="resume-title">Cloud Technologies:</h3>
-            <div class="resume-item">
-              <p>
-                <ul>
-                  <li>AWS</li>
-                  <li>AWS Lambda</li>
-                  <li>Google Cloud Platform</li>
-                </ul>
-              </p>
-            </div>
-            <h3 class="resume-title">Tools and Technologies:</h3>
-            <div class="resume-item">
-              <p>
-                <ul>
-                  <li>Maven/Gradle</li>
-                  <li>Microservices</li>
-                  <li>REST</li>
-                  <li>AJAX</li>
-                  <li>ETL Data Integration</li>
-                  <li>Jenkins</li>
-                  <li>JIRA</li>
-                </ul>
-              </p>
-            </div>
-            <h3 class="resume-title">Servers and OS:</h3>
-            <div class="resume-item">
-              <p>
-                <ul>
-                  <li>Tomcat</li>
-                  <li>MacOS, Windows, Linux</li>
-                </ul>
-              </p>
-            </div>
-          </div>
+        <div class="skill-filter-bar">
+          <button class="skill-filter-btn active" data-cat="all">All</button>
+          <button class="skill-filter-btn" data-cat="lang">Languages</button>
+          <button class="skill-filter-btn" data-cat="backend">Backend</button>
+          <button class="skill-filter-btn" data-cat="data">Data &amp; Search</button>
+          <button class="skill-filter-btn" data-cat="ml">ML</button>
+          <button class="skill-filter-btn" data-cat="db">Databases</button>
+          <button class="skill-filter-btn" data-cat="devops">DevOps</button>
+          <button class="skill-filter-btn" data-cat="cloud">Cloud</button>
+          <button class="skill-filter-btn" data-cat="security">Security</button>
+        </div>
+
+        <div class="skill-tags-grid">
+          <span class="skill-tag" data-cat="lang">Java</span>
+          <span class="skill-tag" data-cat="lang">Python</span>
+          <span class="skill-tag" data-cat="lang">JavaScript</span>
+          <span class="skill-tag" data-cat="lang">R</span>
+          <span class="skill-tag" data-cat="lang">Go</span>
+          <span class="skill-tag" data-cat="lang">SQL</span>
+          <span class="skill-tag" data-cat="backend">Spring Boot</span>
+          <span class="skill-tag" data-cat="backend">Spring Batch</span>
+          <span class="skill-tag" data-cat="backend">Spring MVC</span>
+          <span class="skill-tag" data-cat="backend">JPA/Hibernate</span>
+          <span class="skill-tag" data-cat="backend">Flask</span>
+          <span class="skill-tag" data-cat="backend">REST APIs</span>
+          <span class="skill-tag" data-cat="backend">Microservices</span>
+          <span class="skill-tag" data-cat="backend">Quartz</span>
+          <span class="skill-tag" data-cat="data">Elasticsearch</span>
+          <span class="skill-tag" data-cat="data">Apache Hadoop</span>
+          <span class="skill-tag" data-cat="data">Hive</span>
+          <span class="skill-tag" data-cat="data">ETL Pipelines</span>
+          <span class="skill-tag" data-cat="data">Pandas</span>
+          <span class="skill-tag" data-cat="data">NumPy</span>
+          <span class="skill-tag" data-cat="data">Scipy</span>
+          <span class="skill-tag" data-cat="data">Tableau</span>
+          <span class="skill-tag" data-cat="ml">TensorFlow</span>
+          <span class="skill-tag" data-cat="ml">Scikit-Learn</span>
+          <span class="skill-tag" data-cat="ml">OpenCV</span>
+          <span class="skill-tag" data-cat="ml">Matplotlib</span>
+          <span class="skill-tag" data-cat="ml">Seaborn</span>
+          <span class="skill-tag" data-cat="ml">NLTK</span>
+          <span class="skill-tag" data-cat="db">PostgreSQL</span>
+          <span class="skill-tag" data-cat="db">Oracle</span>
+          <span class="skill-tag" data-cat="db">MongoDB</span>
+          <span class="skill-tag" data-cat="db">AWS DynamoDB</span>
+          <span class="skill-tag" data-cat="db">Redis</span>
+          <span class="skill-tag" data-cat="devops">Docker</span>
+          <span class="skill-tag" data-cat="devops">Jenkins</span>
+          <span class="skill-tag" data-cat="devops">Maven</span>
+          <span class="skill-tag" data-cat="devops">Gradle</span>
+          <span class="skill-tag" data-cat="devops">Git</span>
+          <span class="skill-tag" data-cat="devops">Tomcat</span>
+          <span class="skill-tag" data-cat="cloud">AWS Lambda</span>
+          <span class="skill-tag" data-cat="cloud">AWS S3</span>
+          <span class="skill-tag" data-cat="cloud">Google Cloud Platform</span>
+          <span class="skill-tag" data-cat="security">OpenSSL</span>
+          <span class="skill-tag" data-cat="security">PGP Encryption</span>
+          <span class="skill-tag" data-cat="security">OAuth 2.0</span>
         </div>
 
       </div><!-- End of Skills -->
@@ -365,7 +342,27 @@
         </div>
       </div><!-- End of Certifications -->
     </section><!-- End About Section -->
-    
+
+    <!-- ======= Now Section ======= -->
+    <section id="now" class="resume now-section">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Now</h2>
+          <p>What I'm up to</p>
+        </div>
+
+        <div class="now-content reveal">
+          <p>Currently at <strong>Saadian Technologies</strong> in Dublin, working on a prison notification platform used by police forces across the UK and US. The work spans the full stack — building data pipelines and Elasticsearch-backed search, stabilising the application, and designing and shipping new features and enhancements that help forces do their jobs more effectively. It's the kind of work where the end result genuinely matters: safer communities and fewer things falling through the cracks.</p>
+          <p>In the evenings I'm working through <em>Designing Data-Intensive Applications</em> — focused on system design, distributed consensus, and replication. Alongside that, I'm keeping close tabs on the AI and ML space: reading about <strong>agentic workflows</strong>, <strong>LLM infrastructure</strong> (inference serving, context windows, retrieval-augmented generation), and how reasoning models are changing what "software" even means. Tools like Claude Code, Cursor, and the broader shift to agent-native development feel like they're reshaping the job in real time — I find that genuinely exciting rather than alarming.</p>
+          <p>I follow the intersection of AI and distributed systems closely — model serving at scale, vector databases, streaming pipelines feeding ML features, the economics of GPU clusters. When I'm not reading, I'm on the tennis court.</p>
+          <p>Looking to connect with teams working on large-scale distributed systems, data infrastructure, search, or applied AI.</p>
+          <span class="now-meta">// last updated October 2026</span>
+        </div>
+
+      </div>
+    </section><!-- End Now Section -->
+
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">
       <div class="container">
@@ -373,96 +370,163 @@
         <div class="section-title">
           <h2>Resume</h2>
           <p>Check My Resume</p>
-          <p style="font-size: small;"><i class="icofont-download"></i> Download <a href="https://bit.ly/3VSb7vx" target="_blank">CV</a></p>
         </div>
 
         <div class="row">
           <div class="col-lg-6">
             <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>MSc in Computing (Data Analytics)</h4>
-              <h5>September 2022 - August 2023</h5>
-              <p><b>Relevant Coursework</b>: Machine Learning, Artificial Intelligence, Data Analytics & Data Mining, Cloud Computing</p>
-              <p>Dublin City University, Dublin, Ireland</p>
-              <p></p>
-            </div>
-            <div class="resume-item">
-              <h4>Master of Computer Applications</h4>
-              <h5>June 2015 - June 2018</h5>
-              <p><b>Relevant Coursework</b>: Software Engineering, Advance Data Structures, Design & Analysis of Algorithms, Object Oriented Analysis & Design, Service Oriented Architecture, Big Data Analytics, Cloud Computing</p>
-              <p>University of Pune, Pune, India</p>
-              <p></p>
-            </div>
-            <div class="resume-item">
-              <h4>Bachelor of Computer Applications</h4>
-              <h5>June 2012 - May 2015</h5>
-              <p><b>Relevant Coursework</b>: Software Engineering, Data Structures, Object Oriented Programming, Introduction to System Programming & Operating Systems</p>
-              <p>University of Pune, Pune, India</p>
-              <p></p>
+            <div class="timeline">
+              <div class="tl-item reveal">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4 class="tl-title">MSc Computing (Data Analytics)</h4>
+                  <span class="tl-date">Sep 2022 – Aug 2023</span>
+                  <p class="tl-org">Dublin City University · Dublin, Ireland</p>
+                  <p style="font-size:13px;color:var(--text-muted);margin:0;">Machine Learning, AI, Data Analytics &amp; Mining, Cloud Computing</p>
+                </div>
+              </div>
+              <div class="tl-item reveal reveal-d1">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4 class="tl-title">Master of Computer Applications</h4>
+                  <span class="tl-date">Jun 2015 – Jun 2018</span>
+                  <p class="tl-org">Savitribai Phule Pune University · Pune, India</p>
+                </div>
+              </div>
+              <div class="tl-item reveal reveal-d2">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4 class="tl-title">Bachelor of Computer Applications</h4>
+                  <span class="tl-date">Jun 2012 – May 2015</span>
+                  <p class="tl-org">Savitribai Phule Pune University · Pune, India</p>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-lg-6">
             <h3 class="resume-title">Work Experience</h3>
-            <div class="resume-item">
-              <h4>Software Developer</h4>
-              <h5>June 2023 - Present</h5>
-              <p>Saadian Technologies, Dublin, Ireland</p>
-              <p>
-                <ul>
-                  <li>Responsible to implement functionalities and improve performance of the application based on the requirements using spring and hibernate. The optimised code improved the performance of the application by almost 70% by dropping the loading time of dashboards from 25 seconds to under 10 seconds.
-                  </li>
-                  <li>
-                    Designed and developed dashboards to provide valuable insights about the data present in the application for users which helped them understand the data better and get insights about the offenders.
-                  </li>
-                  <li>
-                    Worked on POC's with new technologies and machine learning models for innovation work that can add value to the application in the form of new or as a substitute to the current features which can increase the efficiency and make the software better.
-                  </li>
-                </ul>
-              </p>
-            </div>
-            <div class="resume-item">
-              <h4>Teaching Assistant</h4>
-              <h5>October 2022 - May 2023</h5>
-              <p>Dublin City University, Dublin, Ireland</p>
-              <p>
-              <ul>
-                <li>Department: School of Electronic Engineering</li>
-                <li>Teaching Assistant for EE417B and EE417 (Web Application Development)</li>
-              </ul>
-              </p>
-            </div>
-            <div class="resume-item">
-              <h4>Software Development Engineer II</h4>
-              <h5>October 2018 - June 2022</h5>
-              <p>Pathlock (formerly Greenlight Technologies), Pune, India</p>
-              <p>
-              <ul>
-                <li>Project: EBCP</li>
-                <li>Technologies: Java 8, Spring MVC, JPA/Hibernate, Maven, Jenkins, MongoDB, Oracle, SAPUI, JavaScript, JSON, REST</li>
-                <li>Collaborated with clients in requirement gathering activities and design discussion to design ETL pipeline to process non-ERP files.</li>
-                <li>Designed ETL pipelines to distribute and process data from ERP and non-ERP files generated by target systems like SAP, ERP, Oracle EBS, QlikView and Workday systems. The optimised code improved the distribution process and performance by 40% and processed all the critical files in near real-time.</li>
-                <li>Responsible for integration of encryption and decryption mechanism to ERP files to keep the data encrypted and secure with support for Open SSL and PGP Encryption in the application.</li>
-                <li>Responsible for designing and implementing various modules, re-engineering existing implementation, code optimisation and performance enhancements. The improved code increased the performance of the application by 20-30%.</li>
-                <li>Developed import/export functionality to export data from authoritative source and import into another system. The functionality reduced human intervention and errors by 30%.</li>
-                <li>Involved in requirement gathering activities like evaluating services using a variety of internal/external data and provide inputs and solutions based on current and target state of the application.</li>
-              </ul>
-              </p>
-            </div>
-            <div class="resume-item">
-              <h4>Software Developer Intern</h4>
-              <h5>October 2017 - September 2018</h5>
-              <p>Pathlock (formerly Greenlight Technologies), Pune, India</p>
-              <p>
-              <ul>
-                <li>Responsible to find alternate solutions to make the application stable and improve performance.</li>
-              </ul>
-              </p>
+            <div class="timeline">
+              <div class="tl-item reveal">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4 class="tl-title">Software Developer</h4>
+                  <span class="tl-date">Jun 2023 – Present</span>
+                  <p class="tl-org">Saadian Technologies · Dublin, Ireland</p>
+                  <ul>
+                    <li>Spring Batch jobs processing 100K+ records/run — 60% faster ingestion</li>
+                    <li>Elasticsearch search &amp; analytics for case management workflows</li>
+                    <li>Query optimisation: 25s → &lt;10s dashboard load (70% gain)</li>
+                    <li>OpenCV POC for automated data extraction, −40% manual entry</li>
+                    <li>Dockerised deployments across environments</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tl-item reveal reveal-d1">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4 class="tl-title">Teaching Assistant</h4>
+                  <span class="tl-date">Oct 2022 – May 2023</span>
+                  <p class="tl-org">Dublin City University · Dublin, Ireland</p>
+                  <ul>
+                    <li>Web Application Development (EE417 / EE417B), School of Electronic Engineering</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tl-item reveal reveal-d2">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4 class="tl-title">Software Development Engineer II</h4>
+                  <span class="tl-date">Oct 2018 – Jun 2022</span>
+                  <p class="tl-org">Pathlock (fmr. Greenlight Technologies) · Pune, India</p>
+                  <ul>
+                    <li>ETL pipelines for SAP, Oracle EBS, QlikView, Workday — 40% faster distribution</li>
+                    <li>OpenSSL &amp; PGP encryption for ERP file security</li>
+                    <li>Cross-system data migration tooling, −30% manual intervention</li>
+                    <li>Core module re-engineering — 20–30% throughput gain</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tl-item reveal reveal-d3">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4 class="tl-title">Software Developer Intern</h4>
+                  <span class="tl-date">Oct 2017 – Sep 2018</span>
+                  <p class="tl-org">Pathlock (fmr. Greenlight Technologies) · Pune, India</p>
+                  <ul>
+                    <li>Production stability fixes and critical code path optimisation</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
       </div>
     </section><!-- End Resume Section -->
+
+    <!-- ======= Projects Section ======= -->
+    <section id="projects" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>Selected work</p>
+        </div>
+
+        <div class="project-cards-grid">
+          <div class="project-card reveal">
+            <div class="project-card-top">
+              <h4>Sentiment Analysis Pipeline</h4>
+              <span class="project-year">2023</span>
+            </div>
+            <span class="project-metric">Published · AICS 2023</span>
+            <p>NLP research pipeline comparing lexicon-based and ML-based sentiment analysis, identifying systematic outlier words across methods.</p>
+            <div class="project-stack">
+              <span class="stack-chip">Python</span>
+              <span class="stack-chip">Scikit-Learn</span>
+              <span class="stack-chip">NLTK</span>
+              <span class="stack-chip">Pandas</span>
+              <span class="stack-chip">Matplotlib</span>
+            </div>
+            <div class="project-links">
+              <a href="https://doi.org/10.48550/arXiv.2311.06221" target="_blank"><i class="ri-article-line"></i> arXiv preprint</a>
+            </div>
+          </div>
+
+          <div class="project-card reveal reveal-d1">
+            <div class="project-card-top">
+              <h4>E-Commerce Image Classifier</h4>
+              <span class="project-year">2023</span>
+            </div>
+            <span class="project-metric">94% accuracy</span>
+            <p>CNN-based model for automated product categorisation. Data augmentation and transfer learning on limited labelled data.</p>
+            <div class="project-stack">
+              <span class="stack-chip">Python</span>
+              <span class="stack-chip">TensorFlow</span>
+              <span class="stack-chip">Keras</span>
+              <span class="stack-chip">OpenCV</span>
+              <span class="stack-chip">NumPy</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal reveal-d2">
+            <div class="project-card-top">
+              <h4>Recommendation Engine</h4>
+              <span class="project-year">2023</span>
+            </div>
+            <p>Collaborative filtering system using matrix factorisation for personalised recommendations, exposed via a Flask REST API.</p>
+            <div class="project-stack">
+              <span class="stack-chip">Python</span>
+              <span class="stack-chip">Scikit-Learn</span>
+              <span class="stack-chip">NumPy</span>
+              <span class="stack-chip">Flask</span>
+              <span class="stack-chip">Pandas</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Projects Section -->
     <!-- ======= Contact Section ======= -->
     <!--<section id="contact" class="contact">
       <div class="container">
@@ -503,7 +567,26 @@
     <div class="credits">
       <p>&lt;&gt; with ❤ &copy; 2026</p>
     </div>
-  </div> <!-- End of Loader -->
+  </div> <!-- End of container -->
+
+  <!-- ── Section progress dots (fixed right rail) ── -->
+  <div id="section-dots" aria-hidden="true"></div>
+
+  <!-- ── Command palette overlay ── -->
+  <div id="cmd-overlay" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div id="cmd-box">
+      <div id="cmd-input-row">
+        <i class="ri-search-line"></i>
+        <input id="cmd-input" type="text" placeholder="Type a command or search…" autocomplete="off" spellcheck="false">
+        <span id="cmd-esc-hint">esc</span>
+      </div>
+      <ul id="cmd-list" role="listbox"></ul>
+      <div id="cmd-empty" style="display:none;">No results</div>
+    </div>
+  </div>
+
+  <!-- ── Copy email toast ── -->
+  <div id="copy-toast" role="status" aria-live="polite"></div>
   <!-- JS File for Loader -->
   <script type="text/javascript" src="assets/js/loader.js"></script>
   <script>
@@ -537,6 +620,9 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Redesign features -->
+  <script src="assets/js/redesign.js"></script>
 
 </body>
 

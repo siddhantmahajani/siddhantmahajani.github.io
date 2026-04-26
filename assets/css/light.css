@@ -6,16 +6,16 @@
 
 /* ── Design tokens ─────────────────────────────────────────── */
 :root {
-  --bg:           #FFFFFF;
-  --surface:      #F6F8FA;
-  --surface-alt:  #EAEEF2;
-  --text:         #1F2328;
-  --text-muted:   #656D76;
-  --accent:       #0969DA;
-  --accent-dark:  #0550AE;
-  --border:       #D0D7DE;
-  --shadow-sm:    0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-md:    0 4px 20px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
+  --bg:           #fdf6e3;
+  --surface:      #eee8d5;
+  --surface-alt:  #e5dfcb;
+  --text:         #586e75;
+  --text-muted:   #93a1a1;
+  --accent:       #268bd2;
+  --accent-dark:  #1a6fa8;
+  --border:       #d4cebc;
+  --shadow-sm:    0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md:    0 4px 20px rgba(0,0,0,0.09), 0 1px 4px rgba(0,0,0,0.05);
   --radius:       14px;
   --radius-sm:    8px;
 }
@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--accent);
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(9, 105, 218, 0.3);
+  box-shadow: 0 4px 14px rgba(38, 139, 210, 0.3);
 }
 
 @media (max-width: 992px) {
@@ -199,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu .active > a,
 .nav-menu li:hover > a {
   color: var(--accent);
-  background: rgba(9, 105, 218, 0.09);
+  background: rgba(38, 139, 210, 0.09);
   text-decoration: none;
 }
 
@@ -263,7 +263,7 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav .active > a,
 .mobile-nav li:hover > a {
   color: var(--accent);
-  background: rgba(9, 105, 218, 0.08);
+  background: rgba(38, 139, 210, 0.08);
   text-decoration: none;
 }
 
@@ -301,7 +301,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   top: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(253, 246, 227, 0.93);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
@@ -693,13 +693,13 @@ section .container {
 .resume .resume-item h5 {
   font-size: 12px;
   font-weight: 600;
-  background: rgba(9, 105, 218, 0.08);
+  background: rgba(38, 139, 210, 0.08);
   color: var(--accent);
   padding: 3px 12px;
   display: inline-block;
   border-radius: 20px;
   margin-bottom: 10px;
-  border: 1px solid rgba(9, 105, 218, 0.18);
+  border: 1px solid rgba(38, 139, 210, 0.18);
   letter-spacing: 0.1px;
 }
 
@@ -783,7 +783,7 @@ section .container {
 
 .services .icon-box:hover {
   border-color: var(--accent);
-  box-shadow: 0 8px 28px rgba(9, 105, 218, 0.12);
+  box-shadow: 0 8px 28px rgba(38, 139, 210, 0.12);
   transform: translateY(-3px);
 }
 
@@ -856,7 +856,7 @@ section .container {
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: rgba(9, 105, 218, 0.82);
+  background: rgba(38, 139, 210, 0.82);
   position: absolute;
   left: 0;
   right: 0;
@@ -947,7 +947,7 @@ section .container {
   border-radius: 50%;
   padding: 12px;
   float: left;
-  background: rgba(9, 105, 218, 0.08);
+  background: rgba(38, 139, 210, 0.08);
 }
 
 .contact .info-box h3 {
@@ -1040,7 +1040,7 @@ section .container {
 .contact .php-email-form textarea:focus {
   border-color: var(--accent);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.1);
+  box-shadow: 0 0 0 3px rgba(38, 139, 210, 0.1);
 }
 
 .contact .php-email-form button[type="submit"] {
@@ -1158,7 +1158,7 @@ section .container {
   .credits {
     text-align: center;
     padding: 8px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(253, 246, 227, 0.97);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-top: 1px solid var(--border);

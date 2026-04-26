@@ -10,10 +10,10 @@ toggle.addEventListener("click", function() {
     if (mainTheme.getAttribute("href") == "assets/css/light.css" && shuffleTheme.getAttribute("href") == "assets/css/light-shuffle.css") {
         mainTheme.href = "assets/css/dark.css";
         shuffleTheme.href = "assets/css/dark-shuffle.css";
-        toggleIcon.className = "icofont-sun-alt";
+        toggleIcon.className = "ri-sun-line";
     } else if (mainTheme.getAttribute("href") == "assets/css/dark.css" && shuffleTheme.getAttribute("href") == "assets/css/dark-shuffle.css") {
         mainTheme.href = "assets/css/light.css";
         shuffleTheme.href = "assets/css/light-shuffle.css";
-        toggleIcon.className = "icofont-moon";
+        toggleIcon.className = "ri-moon-line";
     }
 });

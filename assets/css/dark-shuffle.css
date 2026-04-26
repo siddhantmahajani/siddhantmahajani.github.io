@@ -2,19 +2,17 @@
 # Dark shuffle theme CSS — modernised 2025
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&display=swap');
-
 .text {
   font-weight: 300;
   font-size: 34px;
-  color: #E2E8F0;
+  color: #e6edf3;
   font-family: "JetBrains Mono", "Noto Sans Mono", monospace;
   letter-spacing: -0.5px;
 }
 
 .dud {
-  color: #475569;
-  opacity: 0.8;
+  color: #484f58;
+  opacity: 0.85;
 }
 
 @media (max-width: 768px) {

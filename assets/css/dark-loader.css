@@ -1,34 +1,96 @@
 /*--------------------------------------------------------------
-# CSS for Loader
+# Loader — dark (GitHub Dark)
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
+#overlay {
+  position: fixed;
+  z-index: 99999;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #0d1117;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease 0.3s;
+}
 
-#overlay{
-    position:absolute;
-    z-index:99999;
-    top:0;
-    left:0;
-    bottom:0;
-    right:0;
-    background: #FDF6E3;
-    transition: 1s 0.4s;
-  }
-  #progress{
-    height:1px;
-    background: #073642;
-    position:absolute;
-    width:0;
-    top:50%;
-  }
-  #progstat{
-    font-size:0.7em;
-    font-family: "Noto Sans Mono", monospace;
-    letter-spacing: 3px;
-    position:absolute;
-    top:50%;
-    margin-top:-40px;
-    width:100%;
-    text-align:center;
-    color: #CB4B16;
-  }
+#loader-term {
+  width: min(580px, 90vw);
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.7);
+}
+
+#loader-bar {
+  background: #21262d;
+  border-bottom: 1px solid #30363d;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.ld {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.ld-r { background: #ff5f56; }
+.ld-y { background: #ffbd2e; }
+.ld-g { background: #27c93f; }
+
+#loader-title {
+  flex: 1;
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: #848d97;
+  letter-spacing: 0.5px;
+  margin-right: 38px;
+}
+
+#loader-body {
+  padding: 20px 22px 18px;
+  min-height: 170px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.ll {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: #e6edf3;
+  line-height: 1.75;
+  white-space: pre;
+}
+
+.ll-a { color: #58a6ff; }
+
+#loader-cursor {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: #58a6ff;
+  line-height: 1.75;
+  animation: blink 1s step-start infinite;
+  vertical-align: baseline;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+#progress {
+  height: 2px;
+  background: #58a6ff;
+  width: 0;
+  transition: width 0.35s ease;
+}
+
+@media (max-width: 480px) {
+  .ll, #loader-cursor { font-size: 11px; }
+  #loader-body { padding: 14px 14px 12px; min-height: 140px; }
+}

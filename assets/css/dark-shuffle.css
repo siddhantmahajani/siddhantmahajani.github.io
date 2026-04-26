@@ -7,14 +7,14 @@
 .text {
   font-weight: 300;
   font-size: 34px;
-  color: #93a1a1;
+  color: #E6EDF3;
   font-family: "Fira Code", "Noto Sans Mono", monospace;
   letter-spacing: -0.5px;
 }
 
 .dud {
-  color: #2d5a68;
-  opacity: 0.9;
+  color: #475569;
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {

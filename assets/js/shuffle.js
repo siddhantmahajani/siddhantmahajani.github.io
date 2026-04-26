@@ -72,8 +72,8 @@ class TextScramble {
   const phrases = [
     "Hi 👋🏼,",
     "I'm Siddhant Mahajani",
-    "A Software Engineer",
-    "A Data Analyst",
+    "A Backend Engineer",
+    "A Data Engineer",
     "from Dublin, Ireland"
   ]
   

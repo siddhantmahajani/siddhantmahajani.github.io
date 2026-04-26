@@ -1,27 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const mainDarkTheme = "assets/css/dark.css";
-    const mainDarkShuffleTheme = "assets/css/dark-shuffle.css";
-    const mainLightTheme = "assets/css/light.css";
-    const mainLightShuffleTheme = "assets/css/light-shuffle.css";
-    // const loaderDarkTheme = "assets/css/dark-loader.css";
-    // const loaderLightTheme = "assets/css/light-loader.css";
-    const mainTheme = document.getElementById("main-theme");
-    const shuffleTheme = document.getElementById("shuffle-theme");
-    // const loaderTheme = document.getElementById("loader-theme");
-    const iconToggle = document.getElementById("toggle-icon");
-  
-    // Check if the user's system prefers dark mode
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  
-    if (prefersDarkScheme) {
-      mainTheme.href = mainDarkTheme;
-      shuffleTheme.href = mainDarkShuffleTheme;
-      // loaderTheme.href = loaderDarkTheme;
-      iconToggle.className = "icofont-sun";
-    } else {
-      mainTheme.href = mainLightTheme;
-      shuffleTheme.href = mainLightShuffleTheme;
-      // loaderTheme.href = loaderLightTheme;
-      iconToggle.className = "icofont-moon";
-    }
-  });
+  var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  var mainTheme    = document.getElementById("main-theme");
+  var shuffleTheme = document.getElementById("shuffle-theme");
+  var loaderTheme  = document.getElementById("loader-theme");
+  var iconToggle   = document.getElementById("toggle-icon");
+
+  if (prefersDark) {
+    mainTheme.href    = "assets/css/dark.css";
+    shuffleTheme.href = "assets/css/dark-shuffle.css";
+    loaderTheme.href  = "assets/css/dark-loader.css";
+    if (iconToggle) iconToggle.className = "ri-sun-line";
+  } else {
+    mainTheme.href    = "assets/css/light.css";
+    shuffleTheme.href = "assets/css/light-shuffle.css";
+    loaderTheme.href  = "assets/css/light-loader.css";
+    if (iconToggle) iconToggle.className = "ri-moon-line";
+  }
+});

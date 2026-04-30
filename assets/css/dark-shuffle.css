@@ -2,13 +2,13 @@
 # Dark shuffle theme CSS — modernised 2025
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&display=swap');
 
 .text {
   font-weight: 300;
   font-size: 34px;
   color: #E6EDF3;
-  font-family: "Fira Code", "Noto Sans Mono", monospace;
+  font-family: "JetBrains Mono", "Maple Mono Normal", "Noto Sans Mono", monospace;
   letter-spacing: -0.5px;
 }
 
